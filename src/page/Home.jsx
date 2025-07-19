@@ -6,6 +6,7 @@ import VideoSection from '../components/home/VideoSection'
 import StatsSection from '../components/home/StatsSection'
 import CollegeAffliliation from '../components/home/CollegeAffiliationMarquee'
 import TestimonialsSection from '../components/home/TestimonialsSlider'
+import AchievementsSection from '../components/home/AchievementSection'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
     <FeaturesSection/>
     <AboutSection/>
     <StatsSection/>
+    <AchievementsSection/>
     <VideoSection/>
     <TestimonialsSection/>
     <CollegeAffliliation/>
