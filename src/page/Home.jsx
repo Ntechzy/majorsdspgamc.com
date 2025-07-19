@@ -15,8 +15,8 @@ const Home = () => {
     <AboutSection/>
     <StatsSection/>
     <VideoSection/>
-    <CollegeAffliliation/>
     <TestimonialsSection/>
+    <CollegeAffliliation/>
     </>
   )
 }
