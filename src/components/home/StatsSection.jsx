@@ -1,33 +1,39 @@
 import React from "react";
-import {
-  BookOpen,
-  GraduationCap,
-  UserRoundSearch,
-  Trophy,
-} from "lucide-react";
+import { BookOpen, GraduationCap, UserRoundSearch, Trophy } from "lucide-react";
 
 const stats = [
   {
     value: "500",
     label: "Total Courses",
-    icon: <BookOpen className="w-10 h-10 text-white" />,
+    icon: <BookOpen className="w-12 h-12 text-white" />,
   },
   {
     value: "1900",
     label: "Our Students",
-    icon: <GraduationCap className="w-10 h-10 text-white" />,
+    icon: <GraduationCap className="w-12 h-12 text-white" />,
   },
   {
     value: "750",
     label: "Skilled Lecturers",
-    icon: <UserRoundSearch className="w-10 h-10 text-white" />,
+    icon: <UserRoundSearch className="w-12 h-12 text-white" />,
   },
-
 ];
 
 const StatsSection = () => {
   return (
-    <section className="w-full bg-blue-500 py-10">
+    <section
+      className="relative w-full py-14 text-white text-center"
+      style={{
+        backgroundImage:
+          "url('https://majorsdspgamc.com/assets/images/Facility/majorsdspgamc-College-Other-Facility1.webp')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-blue-950/60 z-0" />
+
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-white">
         {stats.map((stat, index) => (
           <div
@@ -35,7 +41,7 @@ const StatsSection = () => {
             className="flex flex-col items-center text-center relative"
           >
             {/* SVG Blob Background */}
-            <div className="relative w-30 h-30 mb-4">
+            <div className="relative w-35 h-35 mb-4">
               <svg
                 viewBox="0 0 200 200"
                 xmlns="http://www.w3.org/2000/svg"
