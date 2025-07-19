@@ -14,7 +14,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-start h-full max-w-6xl mx-auto px-6">
         <p className="text-[#f8a81c] hover:text-[#f7b93e] uppercase tracking-widest font-bold text-sm mb-2">
-          🎓 Welcome to Eduka!
+          🎓 Welcome to Major SD Singh!
         </p>
 
         <h1 className="text-white text-4xl md:text-5xl font-extrabold leading-tight">
