@@ -1,6 +1,12 @@
 import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -10,13 +16,13 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-4">About Us</h3>
           <p className="mb-4 text-gray-300">
-            Dr. Jitendra Singh and Dr. Anita Ranjan nourished this college by all his intellectual, 
-            spiritual, and social efforts which results that this college is leading educational 
-            institute of the country.
+            Dr. Jitendra Singh and Dr. Anita Ranjan nourished this college by
+            all his intellectual, spiritual, and social efforts which results
+            that this college is leading educational institute of the country.
           </p>
           <p className="mb-4 text-gray-300">
-            College offers B.A.M.S. Course of 4.5 years (100 Seats) and M.D./M.S. (Ayurveda) 
-            of 3 Years (30 seats).
+            College offers B.A.M.S. Course of 4.5 years (100 Seats) and
+            M.D./M.S. (Ayurveda) of 3 Years (30 seats).
           </p>
           <div className="mt-6">
             <h4 className="font-semibold mb-3">Follow Us</h4>
@@ -42,27 +48,42 @@ const Footer = () => {
           <h3 className="text-xl font-bold mb-4">Useful Links</h3>
           <ul className="space-y-2 text-gray-300">
             <li>
-              <a href="https://ncism.org" className="hover:text-[#14a9e3] hover:underline transition-colors">
+              <a
+                href="https://ncism.org"
+                className="hover:text-[#14a9e3] hover:underline transition-colors"
+              >
                 NCISM
               </a>
             </li>
             <li>
-              <a href="https://ayush.gov.in" className="hover:text-[#14a9e3] hover:underline transition-colors">
+              <a
+                href="https://ayush.gov.in"
+                className="hover:text-[#14a9e3] hover:underline transition-colors"
+              >
                 Ministry of AYUSH
               </a>
             </li>
             <li>
-              <a href="https://csjmu.ac.in" className="hover:text-[#14a9e3] hover:underline transition-colors">
+              <a
+                href="https://csjmu.ac.in"
+                className="hover:text-[#14a9e3] hover:underline transition-colors"
+              >
                 CSJM University
               </a>
             </li>
             <li>
-              <a href="https://mgaau.ac.in" className="hover:text-[#14a9e3] hover:underline transition-colors">
+              <a
+                href="https://mgaau.ac.in"
+                className="hover:text-[#14a9e3] hover:underline transition-colors"
+              >
                 MGGAU Gorakhpur
               </a>
             </li>
             <li>
-              <a href="https://upayushcounselling.upsdc.gov.in" className="hover:text-[#14a9e3] hover:underline transition-colors">
+              <a
+                href="https://upayushcounselling.upsdc.gov.in"
+                className="hover:text-[#14a9e3] hover:underline transition-colors"
+              >
                 UP AYUSH Counseling
               </a>
             </li>
@@ -74,18 +95,44 @@ const Footer = () => {
           <div className="space-y-3 text-gray-300 mb-6">
             <div className="flex items-start gap-3">
               <Phone className="w-5 h-5 mt-1 flex-shrink-0" />
-              <a href="tel:+917311125822" className="hover:underline text-white">+91 7311125822</a>
+              <a
+                href="tel:+917300864280"
+                className="hover:underline text-white"
+              >
+                +91 7300864280
+              </a>
+              <a
+                href="tel:+918840243743"
+                className="hover:underline text-white"
+              >
+                +91 8840243743
+              </a>
+            </div>
+            <div className="flex items-start gap-3">
+              <FaWhatsapp className="w-5 h-5 mt-1 flex-shrink-0" />
+              <a
+                href="https://wa.me/917300864280"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-white"
+              >
+                +91 7300864280
+              </a>
             </div>
             <div className="flex items-start gap-3">
               <Mail className="w-5 h-5 mt-1 flex-shrink-0" />
-              <a href="mailto:majorsdsinghayd@gmail.com" className="hover:underline text-white">
+              <a
+                href="mailto:majorsdsinghayd@gmail.com"
+                className="hover:underline text-white"
+              >
                 majorsdsinghayd@gmail.com
               </a>
             </div>
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
               <address className="not-italic">
-                MAJOR S.D. SINGH P.G. AYURVEDIC MEDICAL COLLEGE & HOSPITAL<br />
+                MAJOR S.D. SINGH P.G. AYURVEDIC MEDICAL COLLEGE & HOSPITAL
+                <br />
                 BEWAR ROAD, FATEHGARH - FARRUKHABAD (U.P.) 209601
               </address>
             </div>
@@ -109,7 +156,10 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/10 text-center text-gray-400 text-sm">
-        <p>© {new Date().getFullYear()} MAJOR S.D. SINGH P.G. AYURVEDIC MEDICAL COLLEGE. All Rights Reserved.</p>
+        <p>
+          © {new Date().getFullYear()} MAJOR S.D. SINGH P.G. AYURVEDIC MEDICAL
+          COLLEGE. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

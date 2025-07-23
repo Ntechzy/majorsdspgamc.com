@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { BoxReveal } from "../magicui/box-reveal";
 
 const HeroSection = () => {
-    const BgImage= "https://majorsdspgamc.com/assets/images/Media/majorsdspgamc-CAMPUS-2.webp"
+    const BgImage="/college.png"
   return (
     <div
       className="relative h-[90vh] w-full bg-cover bg-center"
