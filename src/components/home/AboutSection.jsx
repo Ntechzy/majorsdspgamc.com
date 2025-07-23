@@ -62,7 +62,7 @@ const AboutSection = () => {
             <p className="text-gray-600 text-sm mb-3">
               Dedicated to excellence, inclusivity, and transformation through ancient wisdom and modern learning practices.
             </p>
-            <p className="text-5xl font-bold text-teal-700 text-right"><span className="text-gray-600 text-3xl ">Seats</span>100+</p>
+            <p className="text-5xl font-bold text-teal-700 text-right"><span className="text-gray-600 text-3xl ">Seats</span>100</p>
           </div>
         </div>
       </div>

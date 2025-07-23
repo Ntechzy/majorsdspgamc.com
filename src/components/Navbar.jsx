@@ -7,7 +7,7 @@ const menuItems = [
   {
     name: "Home",
     path: "/",
-    hasDropdown: true,
+    hasDropdown: false,
     submenu: [
       { name: "Overview", path: "/overview" },
       { name: "Campus Tour", path: "/campus-tour" },

@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { BoxReveal } from "../magicui/box-reveal";
 
 const HeroSection = () => {
     const BgImage= "https://majorsdspgamc.com/assets/images/Media/majorsdspgamc-CAMPUS-2.webp"
@@ -16,12 +17,13 @@ const HeroSection = () => {
         <p className="text-[#f8a81c] hover:text-[#f7b93e] uppercase tracking-widest font-bold text-sm mb-2">
           🎓 Welcome to Major SD Singh!
         </p>
-
+  
+  <BoxReveal  boxColor = "#f8a81c">
         <h1 className="text-white text-4xl md:text-5xl font-extrabold leading-tight">
           Start Your Beautiful <br />
           And <span className="text-[#f8a81c]">Bright</span> Future
         </h1>
-
+</BoxReveal>
         <p className="text-white text-sm md:text-base mt-4 max-w-2xl">
           There are many variations of passages of Lorem Ipsum available but the
           majority have suffered alteration in some repeat predefined chunks

@@ -27,7 +27,7 @@ const courses = [
     seats: 5,
     link: "/courses/shalya-tantra",
     image:
-      "https://sgtuniversity.ac.in/assets/images/faculty/ims/programmes/Bachelor_of_Ayurvedic_Medicine_and_Surgery.webp",
+      "/assets/courses/c3.png",
   },
   {
     title: "Ayurvedic Nursing",
