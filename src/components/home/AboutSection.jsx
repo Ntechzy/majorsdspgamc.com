@@ -8,7 +8,7 @@ const AboutSection = () => {
         {/* Left: Image Section */}
         <div className="w-full lg:w-1/2">
           <img
-            src="/assets/about2.png"
+            src="/assets/about3.png"
             alt="About Us"
             className="w-full h-auto"
           />

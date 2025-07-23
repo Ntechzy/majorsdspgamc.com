@@ -8,6 +8,8 @@ import CollegeAffliliation from '../components/home/CollegeAffiliationMarquee'
 import AchievementsSection from '../components/home/AchievementSection'
 import CardHoverEffect from '../components/home/CardHoverEffectDemo'
 import TestimonialsVideos from '../components/home/VideoTestimonials'
+import InstagramPostGrid from '../components/home/InstagramPostGrid'
+import FloatingStatsSection from '../components/home/FloatingStatsSection'
 
 const Home = () => {
   return (
@@ -17,10 +19,12 @@ const Home = () => {
       <AboutSection />
       <StatsSection />
       <CardHoverEffect />
+      {/* <FloatingStatsSection/> */}
       <AchievementsSection />
       <VideoSection />
       <TestimonialsVideos />
       <CollegeAffliliation />
+      <InstagramPostGrid/>
     </>
   )
 }
