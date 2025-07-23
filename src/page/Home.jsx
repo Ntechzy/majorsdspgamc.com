@@ -8,6 +8,7 @@ import CollegeAffliliation from '../components/home/CollegeAffiliationMarquee'
 import AchievementsSection from '../components/home/AchievementSection'
 import CardHoverEffect from '../components/home/CardHoverEffectDemo'
 import TestimonialsVideos from '../components/home/VideoTestimonials'
+import InstagramPostGrid from '../components/home/InstagramPostGrid'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <VideoSection />
       <TestimonialsVideos />
       <CollegeAffliliation />
+      <InstagramPostGrid/>
     </>
   )
 }
