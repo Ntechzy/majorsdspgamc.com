@@ -5,9 +5,9 @@ const courses = [
       "A professional 5.5‑year degree (4.5 years academic + 1 year internship) providing comprehensive knowledge of Ayurvedic medicine, diagnostics, and patient care.",
     duration: "5.5 years",
     seats: 60,
-    link: "/courses/bams",
+    link: "/assets/courses/c1.png",
     image:
-      "https://sgtuniversity.ac.in/assets/images/faculty/ims/programmes/Bachelor_of_Ayurvedic_Medicine_and_Surgery.webp",
+      "/assets/courses/c1.png",
   },
   {
     title: "Prasuti Tantra Avum Stri Rog (MS)",
@@ -17,7 +17,7 @@ const courses = [
     seats: 5,
     link: "/courses/prasuti-tantra",
     image:
-      "https://sgtuniversity.ac.in/assets/images/faculty/ims/programmes/Bachelor_of_Ayurvedic_Medicine_and_Surgery.webp",
+      "/assets/courses/c2.png",
   },
   {
     title: "Shalya Tantra (MS)",
@@ -35,9 +35,9 @@ const courses = [
       "A diploma/degree program (typically 1–2 years) training students in patient care, herbal preparations, Panchakarma support, and holistic nursing.",
     duration: "1–2 years",
     seats: 30,
-    link: "/courses/ayurvedic-nursing",
+    link: "/assets/courses/c4.png",
     image:
-      "https://sgtuniversity.ac.in/assets/images/faculty/ims/programmes/Bachelor_of_Ayurvedic_Medicine_and_Surgery.webp",
+      "/assets/courses/c4.png",
   },
   {
     title: "Ayurvedic Pharmacist",
@@ -47,7 +47,7 @@ const courses = [
     seats: 30,
     link: "/courses/ayurvedic-pharmacist",
     image:
-      "https://sgtuniversity.ac.in/assets/images/faculty/ims/programmes/Bachelor_of_Ayurvedic_Medicine_and_Surgery.webp",
+      "/assets/courses/c5.png",
   },
 ];
 
