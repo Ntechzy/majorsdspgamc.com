@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ChevronDown, Pencil, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -8,60 +8,34 @@ const menuItems = [
     name: "Home",
     path: "/",
     hasDropdown: false,
+  },
+  {
+    name: "About",
+    path: "/about",
+    hasDropdown: true,
     submenu: [
-      { name: "Overview", path: "/overview" },
-      { name: "Campus Tour", path: "/campus-tour" },
-      { name: "Leadership", path: "/leadership" },
+      { name: "About College", path: "/about/about-college" },
+      { name: "Chairman's Message", path: "/about/chairman-message" },
     ],
   },
   {
-    name: "Courses",
-    path: "/courses",
+    name: "Facility",
+    path: "/facility",
     hasDropdown: true,
     submenu: [
-      { name: "BAMS", path: "/courses/bams" },
-      { name: "MD Ayurveda", path: "/courses/md" },
-      { name: "Diploma", path: "/courses/diploma" },
+      { name: "Hospital Facility", path: "/facility/hospital-facility" },
+      { name: "College & Other Facilities", path: "/facility/college&other-facility" },
+      { name: "Hostel", path: "/facility/hostel" },
+      { name: "Gym", path: "/facility/gym" },
     ],
   },
   {
-    name: "Academics",
-    path: "/academics",
+    name: "Hospital Clinical Data",
+    path: "/hospital",
     hasDropdown: true,
     submenu: [
-      { name: "Academic Calendar", path: "/academics/calendar" },
-      { name: "Syllabus", path: "/academics/syllabus" },
-      { name: "Examinations", path: "/academics/exams" },
-    ],
-  },
-  {
-    name: "Pages",
-    path: "/pages",
-    hasDropdown: true,
-    submenu: [
-      { name: "About Us", path: "/pages/about" },
-      { name: "Gallery", path: "/pages/gallery" },
-      { name: "Events", path: "/pages/events" },
-    ],
-  },
-  {
-    name: "Admissions",
-    path: "/admissions",
-    hasDropdown: true,
-    submenu: [
-      { name: "Apply Now", path: "/admissions/apply" },
-      { name: "Eligibility", path: "/admissions/eligibility" },
-      { name: "Fee Structure", path: "/admissions/fees" },
-    ],
-  },
-  {
-    name: "Blog",
-    path: "/blog",
-    hasDropdown: true,
-    submenu: [
-      { name: "Latest News", path: "/blog/news" },
-      { name: "Articles", path: "/blog/articles" },
-      { name: "Events", path: "/blog/events" },
+      { name: "Hospital OPD/IPD Data", path: "/hospital/opd-ipd-data" },
+      { name: "Other Hospital Data", path: "/hospital/other-hospital-data" },
     ],
   },
   {
@@ -75,6 +49,7 @@ const Navbar = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(null);
+  const closeTimeoutRef = useRef(null);
 
   return (
     <header className="bg-white shadow-sm w-full sticky top-0 z-50">
@@ -91,8 +66,15 @@ const Navbar = () => {
             <li
               key={index}
               className="relative group"
-              onMouseEnter={() => setOpenIndex(index)}
-              onMouseLeave={() => setOpenIndex(null)}
+              onMouseEnter={() => {
+                clearTimeout(closeTimeoutRef.current);
+                setOpenIndex(index);
+              }}
+              onMouseLeave={() => {
+                closeTimeoutRef.current = setTimeout(() => {
+                  setOpenIndex(null);
+                }, 300);
+              }}
             >
               <Link
                 to={item.path}
@@ -176,7 +158,7 @@ const Navbar = () => {
               </li>
             ))}
 
-            {/* CTA Button in mobile */}
+            {/* CTA Button in Mobile */}
             <li className="mt-4">
               <Link
                 to="/apply"
@@ -196,3 +178,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
