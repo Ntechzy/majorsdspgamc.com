@@ -17,6 +17,11 @@ const CollegeAffiliationMarquee = () => {
   return (
     <div className="w-full overflow-hidden bg-gradient-to-r from-blue-50 to-gray-50 py-12 px-4 shadow-inner">
       
+      {/* Centered Heading */}
+      <h2 className="text-4xl font-semibold text-center text-gray-800 mb-14">
+        Approval and Affiliations
+      </h2>
+
       <div className="relative">
         {/* Gradient overlays for better UX */}
         <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-blue-50 to-transparent z-10" />
