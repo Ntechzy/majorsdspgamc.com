@@ -14,7 +14,7 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "About College", path: "/pages/university-overview.php" },
+      { name: "About College", path: "/about/about-college" },
       { name: "Vision Mission", path: "/pages/VisionMission.php" },
       { name: "Chairman's Message", path: "/pages/ChairmanMessage.php" },
       { name: "Director Message", path: "/pages/DirectorMessage.php" },
