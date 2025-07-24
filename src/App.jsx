@@ -9,6 +9,7 @@ import VisionMission from "./page/about/VisionMission";
 import ChairmanMessage from "./page/about/ChairmanMessage";
 import DirectorMessage from "./page/about/DirectorMessage";
 import ApprovalAffiliation from "./page/about/ApprovalAffiliation";
+import Contact from "./page/Contact";
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
         <Route path="/about/chairman-message" element={<ChairmanMessage />} />
         <Route path="/about/director-message" element={<DirectorMessage />} />
         <Route path="/about/approvalaffiliation" element={<ApprovalAffiliation />} />
+
+        {/* Contact Pages */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
       <WhatsAppButton />

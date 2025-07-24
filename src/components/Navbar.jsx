@@ -112,7 +112,7 @@ const menuItems = [
   },
   {
     name: "Contact",
-    path: "/pages/contact.php",
+    path: "/contact",
     hasDropdown: false,
   },
   {
