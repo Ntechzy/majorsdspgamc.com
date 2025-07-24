@@ -52,7 +52,7 @@ const TestimonialsSlider = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
             backgroundImage:
-              "url('https://majorsdspgamc.com/assets/images/Facility/majorsdspgamc-College-Other-Facility1.webp')",
+              "url('https://majorsdspgamc.com/asset/images/Facility/majorsdspgamc-College-Other-Facility1.webp')",
           }}
         />
       </motion.div>

@@ -1,8 +1,8 @@
 import React from "react";
-import Image1 from "/assets/InstaPost/Post1.jpg";
-import Image2 from "/assets/InstaPost/post2.jpg";
-import Image3 from "/assets/InstaPost/Post3.jpg";
-import Image4 from "/assets/InstaPost/Post4.jpg";
+import Image1 from "/asset/InstaPost/Post1.jpg";
+import Image2 from "/asset/InstaPost/post2.jpg";
+import Image3 from "/asset/InstaPost/Post3.jpg";
+import Image4 from "/asset/InstaPost/Post4.jpg";
 
 const posts = [
   { image: Image1, link: "https://www.instagram.com/majorsdsinghpg/" },

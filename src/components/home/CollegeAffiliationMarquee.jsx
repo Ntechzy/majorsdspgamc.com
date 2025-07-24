@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 const CollegeAffiliationMarquee = () => {
   // Logo URLs
   const logos = [
-    "/assets/affliation/a1.png",
+    "/asset/affliation/a1.png",
     "https://upload.wikimedia.org/wikipedia/en/1/17/Maha_Yogi_Guru_Gorakhnath_Ayush_University_logo.png",
     "https://upload.wikimedia.org/wikipedia/commons/f/fa/Seal_of_Uttar_Pradesh.svg",
-    "/assets/affliation/a4.png",
-    "/assets/affliation/a5.png",
+    "/asset/affliation/a4.png",
+    "/asset/affliation/a5.png",
   ];
 
   // Duplicate the logos for seamless looping
@@ -50,7 +50,7 @@ const CollegeAffiliationMarquee = () => {
                   className="h-24 w-auto max-w-[200px] object-contain transition-all duration-500"
                   loading="lazy"
                   onError={(e) => {
-                    e.target.src = "/assets/affliation/placeholder.png"; 
+                    e.target.src = "/asset/affliation/placeholder.png"; 
                   }}
                 />
               </div>

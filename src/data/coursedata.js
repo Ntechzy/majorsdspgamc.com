@@ -5,9 +5,9 @@ const courses = [
       "A professional 5.5‑year degree (4.5 years academic + 1 year internship) providing comprehensive knowledge of Ayurvedic medicine, diagnostics, and patient care.",
     duration: "5.5 years",
     seats: 60,
-    link: "/assets/courses/c1.png",
+    link: "/asset/courses/c1.png",
     image:
-      "/assets/courses/c1.png",
+      "/asset/courses/c1.png",
   },
   {
     title: "Prasuti Tantra Avum Stri Rog (MS)",
@@ -17,7 +17,7 @@ const courses = [
     seats: 5,
     link: "/courses/prasuti-tantra",
     image:
-      "/assets/courses/c2.png",
+      "/asset/courses/c2.png",
   },
   {
     title: "Shalya Tantra (MS)",
@@ -27,7 +27,7 @@ const courses = [
     seats: 5,
     link: "/courses/shalya-tantra",
     image:
-      "/assets/courses/c3.png",
+      "/asset/courses/c3.png",
   },
   {
     title: "Ayurvedic Nursing",
@@ -35,9 +35,9 @@ const courses = [
       "A diploma/degree program (typically 1–2 years) training students in patient care, herbal preparations, Panchakarma support, and holistic nursing.",
     duration: "1–2 years",
     seats: 30,
-    link: "/assets/courses/c4.png",
+    link: "/asset/courses/c4.png",
     image:
-      "/assets/courses/c4.png",
+      "/asset/courses/c4.png",
   },
   {
     title: "Ayurvedic Pharmacist",
@@ -47,7 +47,7 @@ const courses = [
     seats: 30,
     link: "/courses/ayurvedic-pharmacist",
     image:
-      "/assets/courses/c5.png",
+      "/asset/courses/c5.png",
   },
 ];
 
