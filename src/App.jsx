@@ -5,6 +5,10 @@ import Footer from "./components/Footer";
 import Home from "./page/Home";
 import WhatsAppButton from "./components/Whatsapp";
 import AboutCollege from "./page/about/AboutCollege";
+import VisionMission from "./page/about/VisionMission";
+import ChairmanMessage from "./page/about/ChairmanMessage";
+import DirectorMessage from "./page/about/DirectorMessage";
+import ApprovalAffiliation from "./page/about/ApprovalAffiliation";
 
 const App = () => {
   return (
@@ -12,10 +16,13 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        
-        {/* About Pages */}
-        <Route path="/about/about-college" element={<AboutCollege/>}/>
 
+        {/* About Pages */}
+        <Route path="/about/about-college" element={<AboutCollege />} />
+        <Route path="/about/vision&mission" element={<VisionMission />} />
+        <Route path="/about/chairman-message" element={<ChairmanMessage />} />
+        <Route path="/about/director-message" element={<DirectorMessage />} />
+        <Route path="/about/approvalaffiliation" element={<ApprovalAffiliation />} />
       </Routes>
       <Footer />
       <WhatsAppButton />
