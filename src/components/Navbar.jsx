@@ -49,7 +49,7 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Principal and Medical Superintendent", path: "/pages/PrincipalAndMedicalSuperintendent.php" },
+      { name: "Principal and Medical Superintendent", path: "/page/principal-medical-superintendent" },
       { name: "Teaching Staff", path: "/pages/TeachingStaff.php" },
       { name: "Intake Capacity", path: "/pages/IntakeCapacity.php" },
       { name: "Non Teaching Staff", path: "/pages/NonTeachingStaff.php" },

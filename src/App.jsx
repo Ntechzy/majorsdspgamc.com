@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./page/Home";
 import WhatsAppButton from "./components/Whatsapp";
+import PrincipleMedical from "./page/NCISM/PrincipleMedical";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/page/principal-medical-superintendent" element={<PrincipleMedical />} />
       </Routes>
       <Footer />
       <WhatsAppButton />
