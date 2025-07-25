@@ -183,17 +183,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* CTA Button (Desktop Only) */}
-        <div className="hidden lg:flex items-center space-x-5">
-          <Link
-            to="/apply"
-            className="bg-[#f8a81c] hover:bg-[#f7b93e] transition-all text-white font-bold px-6 py-4 flex items-center gap-2 text-sm shadow-md rounded-tl-full rounded-tr-full rounded-br-full"
-          >
-            <Pencil size={16} />
-            APPLY NOW
-          </Link>
-        </div>
-
         {/* Hamburger (Mobile) */}
         <div className="lg:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -237,19 +226,6 @@ const Navbar = () => {
                 )}
               </li>
             ))}
-
-            {/* CTA Button in Mobile */}
-            <li className="mt-4">
-              <Link
-                to="/apply"
-                className="block w-full bg-[#f8a81c] hover:bg-[#f7b93e] text-white text-center font-bold px-6 py-3 rounded-full shadow"
-              >
-                <div className="flex justify-center items-center gap-2">
-                  <Pencil size={16} />
-                  APPLY NOW
-                </div>
-              </Link>
-            </li>
           </ul>
         </div>
       )}

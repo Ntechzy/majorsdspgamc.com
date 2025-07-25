@@ -17,6 +17,7 @@ import CollegeFacilities from "./page/facilities/CollegeFacilities";
 import Gym from "./page/facilities/Gym";
 import HospitalFacility from "./page/facilities/HospitalFacility";
 import HeaderTop from "./components/HeaderTop";
+import ApplyNow from "./components/shared/ApplyNow";
 
 const App = () => {
   return (
@@ -48,6 +49,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
+      <ApplyNow/>
       <WhatsAppButton />
     </BrowserRouter>
   );
