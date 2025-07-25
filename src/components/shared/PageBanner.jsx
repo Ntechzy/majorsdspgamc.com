@@ -1,37 +1,50 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom'; // Ensure you're using react-router
+import { Link } from 'react-router-dom';
 
 const PageBanner = ({ title = "Page Title", path = [] }) => {
   return (
     <div
-      className="relative w-full h-[50vh] flex items-center justify-center text-white"
+      className="relative w-full h-[60vh] min-h-[300px] flex items-center justify-center text-white"
       style={{
-        backgroundImage: `url('/page-img.png')`, // static background image
+        backgroundImage: `url('/page-img.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundAttachment: 'fixed', // Adds parallax effect
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0" />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40 z-0" />
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4">
-        <h1 className="text-3xl md:text-4xl font-bold mb-2">{title}</h1>
-        <div className="flex justify-center items-center text-sm font-medium">
-          <Link to="/" className="text-white hover:text-[#f8a814] transition">
+      {/* Content container */}
+      <div className="relative z-10 text-center px-4 w-full max-w-6xl mx-auto">
+        {/* Main title */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">
+          {title}
+        </h1>
+        
+        {/* Breadcrumb navigation */}
+        <nav className="flex justify-center items-center text-base font-medium">
+          <Link 
+            to="/" 
+            className="text-white hover:text-[#f8a814] transition-colors duration-200 flex items-center"
+          >
             Home
           </Link>
+          
           {path.map((item, index) => (
             <React.Fragment key={index}>
-              <ChevronRight className="w-4 h-4 mx-1 text-white" />
-              <span className={`${index === path.length - 1 ? 'text-[#f8a814]' : 'text-white'}`}>
+              <ChevronRight className="w-4 h-4 mx-2 text-white/80" />
+              <span className={`${index === path.length - 1 ? 'text-[#f8a814] font-semibold' : 'text-white'}`}>
                 {item}
               </span>
             </React.Fragment>
           ))}
-        </div>
+        </nav>
       </div>
+
+      {/* Decorative bottom border */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#f8a814] to-transparent opacity-60" />
     </div>
   );
 };

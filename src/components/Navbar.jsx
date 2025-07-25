@@ -20,7 +20,7 @@ const menuItems = [
       { name: "Director Message", path: "/about/director-message" },
       { name: "Principal Message", path: "/about/principal-message" },
       { name: "Approval/Affiliation", path: "/about/approvalaffiliation" },
-      { name: "Awards & Achievement", path: "/pages/AwardsAchievement.php" },
+      { name: "Awards & Achievements", path: "/about/awards-achievements" },
     ],
   },
   {
@@ -77,7 +77,7 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Hospital Facility", path: "/pages/HospitalFacility.php" },
+      { name: "Hospital Facility", path: "/facility/hospital-facility" },
       { name: "College & Other Facilities", path: "/pages/CollegeFacility.php" },
       { name: "Hostel", path: "/pages/Hostel.php" },
       { name: "Gym", path: "/pages/fitness-athletics.php" },
@@ -88,7 +88,7 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Image Gallery", path: "/pages/ImageGallery.php" },
+      { name: "Image Gallery", path: "/media/image-gallery" },
       { name: "Video Gallery", path: "/pages/VideoGallery.php" },
       {
         name: "Events",
