@@ -106,8 +106,8 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Hospital OPD/IPD Data", path: "/pages/HospitalOPD_IPD_Data.php" },
-      { name: "Other Hospital Data", path: "/pages/OtherHospitalData.php" },
+      { name: "Hospital OPD/IPD Data", path: "/hospital-data/hospital-opd-ipd-data" },
+      { name: "Other Hospital Data", path: "/hospital-data/otherhospitaldata" },
     ],
   },
   {
