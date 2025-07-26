@@ -18,6 +18,7 @@ import Gym from "./page/facilities/Gym";
 import HospitalFacility from "./page/facilities/HospitalFacility";
 import HeaderTop from "./components/HeaderTop";
 import ApplyNow from "./components/shared/ApplyNow";
+import PrincipalMessage from "./page/about/PrincipalMessage";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/about/vision&mission" element={<VisionMission />} />
         <Route path="/about/chairman-message" element={<ChairmanMessage />} />
         <Route path="/about/director-message" element={<DirectorMessage />} />
+        <Route path="/about/principal-message" element={<PrincipalMessage />} />
         <Route path="/about/approvalaffiliation" element={<ApprovalAffiliation />} />
 
         {/* Facility Pages */}

@@ -5,11 +5,7 @@ import { motion } from "framer-motion";
 const ApplyNow = () => {
   return (
     <motion.div
-      initial={{ x: 40, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.3 }}
-      whileHover={{ x: -5 }}
-      className="fixed right-0 top-1/2 z-50"
+      className="fixed right-0 top-1/2 "
     >
       <Link
         to="/apply"
@@ -28,7 +24,7 @@ const ApplyNow = () => {
         
         {/* Animated arrow indicator (visible on hover) */}
         <motion.div
-          initial={{ opacity: 0, x: -5 }}
+          initial={{ opacity: 0, x: 0 }}
           animate={{ opacity: 0 }}
           whileHover={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.2 }}

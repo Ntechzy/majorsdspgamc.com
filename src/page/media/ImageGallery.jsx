@@ -2,6 +2,7 @@ import React from 'react'
 import PageBanner from '../../components/shared/PageBanner'
 import Gallery from '../../components/shared/Gallery'
 import { Image } from 'lucide-react'
+import NewsletterSection from '../../components/shared/NewsletterSection'
 
 
 const ImageGallery = () => {
@@ -138,28 +139,29 @@ const ImageGallery = () => {
       <PageBanner title="Image Gallery" path={['Image Gallery']} />
       <Gallery
         title="Our Campus"
-        subtitle="Explore glimpses of our campus, facilities, and learning environment."
+        subtitle="Discover the vibrant spaces where learning, growth, and innovation thrive."
         images={campusImages}
         Icon={Image}
       />
       <Gallery
         title="Education"
-        subtitle="Explore glimpses of our campus, facilities, and learning environment."
+        subtitle="A glimpse into our academic excellence, classrooms, and practical learning sessions."
         images={EducationImages}
         Icon={Image}
       />
       <Gallery
         title="Ceremony"
-        subtitle="Explore glimpses of our campus, facilities, and learning environment."
+        subtitle="Celebrating our proud moments, traditions, and milestones together."
         images={ceremonyImages}
         Icon={Image}
       />
        <Gallery
         title="Student"
-        subtitle="Explore glimpses of our campus, facilities, and learning environment."
+        subtitle="Catch the energy, enthusiasm, and everyday life of our student community."
         images={studentImages}
         Icon={Image}
       />
+      <NewsletterSection/>
     </>
   )
 }

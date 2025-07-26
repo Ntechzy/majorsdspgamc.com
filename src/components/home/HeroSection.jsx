@@ -3,7 +3,7 @@ import { BoxReveal } from "../magicui/box-reveal";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
-    const BgImage = "/college.png";
+    const BgImage = "/college1.png";
     
     // Animation variants
     const containerVariants = {

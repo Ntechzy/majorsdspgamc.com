@@ -7,10 +7,10 @@ const PageBanner = ({ title = "Page Title", path = [] }) => {
     <div
       className="relative w-full h-[60vh] min-h-[300px] flex items-center justify-center text-white"
       style={{
-        backgroundImage: `url('/page-img.png')`,
+        backgroundImage: `url('/newBanner.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed', // Adds parallax effect
+      
       }}
     >
       {/* Gradient overlay */}

@@ -4,7 +4,7 @@ import { MdLocationOn, MdEmail, MdCall } from 'react-icons/md';
 
 const HeaderTop = () => {
     return (
-        <div className="w-full flex text-white text-sm">
+        <div className="w-full flex text-white text-[10px] sm:text-sm ">
             {/* Left section */}
             <div className="bg-[#f8a713] px-6 py-2 flex items-center space-x-3 w-[40%]">
                 <span className="font-semibold">Follow Us:</span>
