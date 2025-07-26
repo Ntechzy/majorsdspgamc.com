@@ -4,29 +4,8 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import achievements from "../../data/achievements";
 
-const achievements = [
-  {
-    id: 1,
-    title: "National Science Award",
-    imageUrl: "asset/certificate/c1.webp",
-  },
-  {
-    id: 2,
-    title: "Top Sports Team",
-    imageUrl: "asset/certificate/c2.webp",
-  },
-  {
-    id: 3,
-    title: "Innovative Research Grant",
-    imageUrl: "asset/certificate/c3.webp",
-  },
-  {
-    id: 4,
-    title: "International Dental Conference",
-    imageUrl: "asset/certificate/c4.webp",
-  },
-];
 
 function AchievementSection() {
   const prevRef = useRef(null);

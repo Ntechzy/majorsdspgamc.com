@@ -2,7 +2,6 @@ import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import {
   FaFacebook,
-  FaTwitter,
   FaInstagram,
   FaYoutube,
   FaWhatsapp,
@@ -27,16 +26,16 @@ const Footer = () => {
           <div className="mt-6">
             <h4 className="font-semibold mb-3">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-[#14a9e3] transition-colors">
+              <a href="https://www.facebook.com/share/14EWEzodCgj/" target="_blank" className="hover:text-[#14a9e3] transition-colors">
                 <FaFacebook size={20} />
               </a>
-              <a href="#" className="hover:text-[#14a9e3] transition-colors">
-                <FaTwitter size={20} />
+              <a href="https://wa.me/917300864280" rel="noopener noreferrer" target="_blank" className="hover:text-[#14a9e3] transition-colors">
+                <FaWhatsapp size={20} />
               </a>
-              <a href="#" className="hover:text-[#14a9e3] transition-colors">
+              <a href="https://www.instagram.com/majorsdsinghpg/" target="_blank" className="hover:text-[#14a9e3] transition-colors">
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="hover:text-[#14a9e3] transition-colors">
+              <a href="https://www.youtube.com/@majorsdsinghp.g.ayurvedicm4085" target="_blank" className="hover:text-[#14a9e3] transition-colors">
                 <FaYoutube size={20} />
               </a>
             </div>

@@ -14,13 +14,13 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "About College", path: "/pages/university-overview.php" },
-      { name: "Vision Mission", path: "/pages/VisionMission.php" },
-      { name: "Chairman's Message", path: "/pages/ChairmanMessage.php" },
-      { name: "Director Message", path: "/pages/DirectorMessage.php" },
-      { name: "Principal Message", path: "/pages/PrincipalMessage.php" },
-      { name: "Approval/Affiliation", path: "/pages/ApprovalAffiliation.php" },
-      { name: "Awards & Achievement", path: "/pages/AwardsAchievement.php" },
+      { name: "About College", path: "/about/about-college" },
+      { name: "Vision & Mission", path: "/about/vision&mission" },
+      { name: "Chairman's Message", path: "/about/chairman-message" },
+      { name: "Director Message", path: "/about/director-message" },
+      { name: "Principal Message", path: "/about/principal-message" },
+      { name: "Approval/Affiliation", path: "/about/approvalaffiliation" },
+      { name: "Awards & Achievements", path: "/about/awards-achievements" },
     ],
   },
   {
@@ -77,7 +77,7 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Hospital Facility", path: "/pages/HospitalFacility.php" },
+      { name: "Hospital Facility", path: "/facility/hospital-facility" },
       { name: "College & Other Facilities", path: "/pages/CollegeFacility.php" },
       { name: "Hostel", path: "/pages/Hostel.php" },
       { name: "Gym", path: "/pages/fitness-athletics.php" },
@@ -88,7 +88,7 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Image Gallery", path: "/pages/ImageGallery.php" },
+      { name: "Image Gallery", path: "/media/image-gallery" },
       { name: "Video Gallery", path: "/pages/VideoGallery.php" },
       {
         name: "Events",
@@ -106,13 +106,13 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Hospital OPD/IPD Data", path: "/pages/HospitalOPD_IPD_Data.php" },
-      { name: "Other Hospital Data", path: "/pages/OtherHospitalData.php" },
+      { name: "Hospital OPD/IPD Data", path: "/hospital-data/hospital-opd-ipd-data" },
+      { name: "Other Hospital Data", path: "/hospital-data/otherhospitaldata" },
     ],
   },
   {
     name: "Contact",
-    path: "/pages/contact.php",
+    path: "/contact",
     hasDropdown: false,
   },
   {
@@ -183,17 +183,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* CTA Button (Desktop Only) */}
-        <div className="hidden lg:flex items-center space-x-5">
-          <Link
-            to="/apply"
-            className="bg-[#f8a81c] hover:bg-[#f7b93e] transition-all text-white font-bold px-6 py-4 flex items-center gap-2 text-sm shadow-md rounded-tl-full rounded-tr-full rounded-br-full"
-          >
-            <Pencil size={16} />
-            APPLY NOW
-          </Link>
-        </div>
-
         {/* Hamburger (Mobile) */}
         <div className="lg:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -237,19 +226,6 @@ const Navbar = () => {
                 )}
               </li>
             ))}
-
-            {/* CTA Button in Mobile */}
-            <li className="mt-4">
-              <Link
-                to="/apply"
-                className="block w-full bg-[#f8a81c] hover:bg-[#f7b93e] text-white text-center font-bold px-6 py-3 rounded-full shadow"
-              >
-                <div className="flex justify-center items-center gap-2">
-                  <Pencil size={16} />
-                  APPLY NOW
-                </div>
-              </Link>
-            </li>
           </ul>
         </div>
       )}
