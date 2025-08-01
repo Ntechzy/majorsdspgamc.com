@@ -5,9 +5,9 @@ const courses = [
       "A professional 5.5‑year degree (4.5 years academic + 1 year internship) providing comprehensive knowledge of Ayurvedic medicine, diagnostics, and patient care.",
     duration: "5.5 years",
     seats: 60,
-    link: "/asset/courses/c1.png",
+    link: "/asset/courses/BAMS.png",
     image:
-      "/asset/courses/c1.png",
+      "/asset/courses/BAMS.png",
   },
   {
     title: "Prasuti Tantra Avum Stri Rog (MS)",
@@ -15,9 +15,9 @@ const courses = [
       "A 3‑year postgraduate specialization in Ayurvedic gynecology and obstetrics, focusing on women’s health, pregnancy care, and reproductive disorders.",
     duration: "3 years",
     seats: 5,
-    link: "/courses/prasuti-tantra",
+    link: "https://i.pinimg.com/736x/19/97/7c/19977c407e0856203fd7f3b62d5209e8.jpg",
     image:
-      "/asset/courses/c2.png",
+      "https://i.pinimg.com/736x/19/97/7c/19977c407e0856203fd7f3b62d5209e8.jpg",
   },
   {
     title: "Shalya Tantra (MS)",
@@ -25,9 +25,9 @@ const courses = [
       "A 3‑year postgraduate course in Ayurvedic surgical sciences, covering classical techniques like Ksharasutra and Panchakarma surgical procedures.",
     duration: "3 years",
     seats: 5,
-    link: "/courses/shalya-tantra",
+    link: "https://i.pinimg.com/736x/d5/5e/84/d55e84801da45b86853616b144ed0fab.jpg",
     image:
-      "/asset/courses/c3.png",
+      "https://i.pinimg.com/736x/d5/5e/84/d55e84801da45b86853616b144ed0fab.jpg",
   },
   {
     title: "Ayurvedic Nursing",
@@ -35,9 +35,9 @@ const courses = [
       "A diploma/degree program (typically 1–2 years) training students in patient care, herbal preparations, Panchakarma support, and holistic nursing.",
     duration: "1–2 years",
     seats: 30,
-    link: "/asset/courses/c4.png",
+    link: "https://dl.geu.ac.in/uploads/image/is-bsc-nursing-a-good-career.jpg",
     image:
-      "/asset/courses/c4.png",
+      "https://dl.geu.ac.in/uploads/image/is-bsc-nursing-a-good-career.jpg",
   },
   {
     title: "Ayurvedic Pharmacist",
@@ -45,9 +45,9 @@ const courses = [
       "A 1‑year diploma course focused on classical Ayurvedic formulations, pharmacognosy, medicine preparation, and dispensing.",
     duration: "1 year",
     seats: 30,
-    link: "/courses/ayurvedic-pharmacist",
+    link: "https://i.pinimg.com/736x/49/f0/31/49f031582e5e51667afbdc97859decf0.jpg",
     image:
-      "/asset/courses/c5.png",
+      "https://i.pinimg.com/736x/49/f0/31/49f031582e5e51667afbdc97859decf0.jpg",
   },
 ];
 
