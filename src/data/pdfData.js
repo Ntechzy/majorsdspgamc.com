@@ -5,7 +5,7 @@
     title: 'AYUSH/NCISM PERMISSION 2024-25',
     subtitle: 'Permission Letter PDF',
     file: '/documents/majorsdspgamc-AYUSH-NCISM-PERMISSION.pdf',
-    download: '/documents/majorsdspgamc-AYUSH-NCISM-PERMISSION.pdf',
+    download: '/documents/Yearly-Permission-AYU0256.pdf',
     downloadText: 'Download Permission Letter',
   },
   {
