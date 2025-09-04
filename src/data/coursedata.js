@@ -4,7 +4,7 @@ const courses = [
     description:
       "A professional 5.5‑year degree (4.5 years academic + 1 year internship) providing comprehensive knowledge of Ayurvedic medicine, diagnostics, and patient care.",
     duration: "5.5 years",
-    seats: 60,
+    seats: 100,
     link: "/asset/courses/BAMS.png",
     image:
       "/asset/courses/BAMS.png",
