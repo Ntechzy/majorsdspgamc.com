@@ -20,6 +20,7 @@ import HospitalFacility from "./page/facilities/HospitalFacility";
 import HeaderTop from "./components/HeaderTop";
 import ApplyNow from "./components/shared/ApplyNow";
 import PrincipalMessage from "./page/about/PrincipalMessage";
+import AwardsAchievements from "./page/about/AwardsAchievements";
 
 const App = () => {
   return (
@@ -37,6 +38,8 @@ const App = () => {
         <Route path="/about/director-message" element={<DirectorMessage />} />
         <Route path="/about/principal-message" element={<PrincipalMessage />} />
         <Route path="/about/approvalaffiliation" element={<ApprovalAffiliation />} />
+        <Route path="/about/awards-achievements" element={<AwardsAchievements />} />
+        
 
         {/* Facility Pages */}
         <Route path="/facility/hospital-facility" element={<HospitalFacility />} />
