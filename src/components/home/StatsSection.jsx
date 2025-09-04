@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BookOpen,
-  GraduationCap,
-  UserRoundSearch,
-  Trophy,
-} from "lucide-react";
+import { BookOpen, GraduationCap } from "lucide-react";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -12,29 +7,32 @@ import { useInView } from "react-intersection-observer";
 // Example Stats Data
 const stats = [
   {
-    value: 124,
-    label: "Graduate Programs",
-    icon: GraduationCap,
-    iconColor: "text-purple-600",
-  },
-  {
-    value: 393,
-    label: "Best Courses",
+    value: 4,
+    label: "Courses",
     icon: BookOpen,
-    iconColor: "text-green-600",
+    iconColor: "text-yellow-600",
+     suffix: "+",
   },
   {
-    value: 2000,
-    label: "Successful Alumni",
+    value: 10,
+    label: "Awards",
     icon: GraduationCap,
-    iconColor: "text-blue-600",
+    iconColor: "text-indigo-600",
+    suffix: "+",
   },
   {
-    value: 95,
-    label: "Satisfaction Rate",
-    isPercent: true,
+    value: 19,
+    label: "Years of Excellence",
     icon: BookOpen,
-    iconColor: "text-rose-600",
+    iconColor: "text-teal-600",
+    suffix: "+",
+  },
+  {
+    value: 20,
+    label: "National & International Seminars",
+    icon: GraduationCap,
+    iconColor: "text-orange-600",
+    suffix: "+",
   },
 ];
 
@@ -59,8 +57,14 @@ const StatsSection = () => {
               <stat.icon className="w-6 h-6" />
             </div>
             <h3 className="text-3xl font-bold text-neutral-900">
-              <CountUp start={0} end={stat.value} duration={2} />
-              {stat.isPercent ? "%" : "+"}
+              {inView && (
+                <CountUp
+                  start={0}
+                  end={stat.value}
+                  duration={2}
+                  suffix={stat.suffix || ""}
+                />
+              )}
             </h3>
             <p className="text-sm text-neutral-600 mt-1">{stat.label}</p>
           </motion.div>
