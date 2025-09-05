@@ -89,16 +89,7 @@ const menuItems = [
     hasDropdown: true,
     submenu: [
       { name: "Image Gallery", path: "/media/image-gallery" },
-      { name: "Video Gallery", path: "/pages/VideoGallery.php" },
-      {
-        name: "Events",
-        path: "javascript:void(0);",
-        hasDropdown: true,
-        submenu: [
-          { name: "Conferences and Academic Activities", path: "/pages/ConferencesandAcademicActivities.php" },
-          { name: "Azadi Ka Amrit Mahotsav", path: "/pages/AzadiKaAmritMahotsav.php" },
-        ],
-      },
+      { name: "Video Gallery", path: "/media/video-gallery" },
     ],
   },
   {

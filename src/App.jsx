@@ -21,6 +21,7 @@ import HeaderTop from "./components/HeaderTop";
 import ApplyNow from "./components/shared/ApplyNow";
 import PrincipalMessage from "./page/about/PrincipalMessage";
 import AwardsAchievements from "./page/about/AwardsAchievements";
+import VideoGallery from "./page/media/VideoGallery";
 
 const App = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
 
         {/* Media Pages */}
         <Route path="/media/image-gallery" element={<ImageGallery />} />
+        <Route path="/media/video-gallery" element={<VideoGallery />} />
 
         {/* Hospital Clinical Data */}
         <Route path="/hospital-data/hospital-opd-ipd-data" element={<HospitalData />} />
