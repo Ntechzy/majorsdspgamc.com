@@ -78,9 +78,9 @@ const menuItems = [
     hasDropdown: true,
     submenu: [
       { name: "Hospital Facility", path: "/facility/hospital-facility" },
-      { name: "College & Other Facilities", path: "/pages/CollegeFacility.php" },
-      { name: "Hostel", path: "/pages/Hostel.php" },
-      { name: "Gym", path: "/pages/fitness-athletics.php" },
+      { name: "College & Other Facilities", path: "/facility/College-facility" },
+      { name: "Hostel", path: "/facility/hostel" },
+      { name: "Gym", path: "/facility/gym" },
     ],
   },
   {

@@ -22,6 +22,8 @@ import ApplyNow from "./components/shared/ApplyNow";
 import PrincipalMessage from "./page/about/PrincipalMessage";
 import AwardsAchievements from "./page/about/AwardsAchievements";
 import VideoGallery from "./page/media/VideoGallery";
+import Hostel from "./page/facilities/Hostel"
+
 
 const App = () => {
   return (
@@ -44,6 +46,9 @@ const App = () => {
 
         {/* Facility Pages */}
         <Route path="/facility/hospital-facility" element={<HospitalFacility />} />
+        <Route path="/facility/college-facility" element={<CollegeFacilities />} />
+        <Route path="/facility/hostel" element={<Hostel/>} />
+        <Route path="/facility/gym" element={<Gym/>} />
      
 
         {/* Media Pages */}
