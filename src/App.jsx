@@ -21,6 +21,8 @@ import HeaderTop from "./components/HeaderTop";
 import ApplyNow from "./components/shared/ApplyNow";
 import PrincipalMessage from "./page/about/PrincipalMessage";
 import AwardsAchievements from "./page/about/AwardsAchievements";
+import Hostel from "./page/facilities/Hostel";
+import Brochure from "./page/student/E-Brochure";
 
 const App = () => {
   return (
@@ -43,7 +45,11 @@ const App = () => {
 
         {/* Facility Pages */}
         <Route path="/facility/hospital-facility" element={<HospitalFacility />} />
-     
+        <Route path="/facility/hostel" element={<Hostel />} />
+        <Route path="/facility/gym" element={<Gym />} />
+
+        {/*student pages*/}
+        <Route path="/student/E-Brochure" element={<Brochure/>}/> 
 
         {/* Media Pages */}
         <Route path="/media/image-gallery" element={<ImageGallery />} />

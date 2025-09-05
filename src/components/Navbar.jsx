@@ -28,10 +28,10 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Course Structure & Fee", path: "/pages/CourseStructureFee.php" },
-      { name: "Admission Enquiry", path: "/pages/university-life.php" },
-      { name: "Student List", path: "/pages/StudentList.php" },
-      { name: "E-Brochure", path: "/pages/E-Brochure.php" },
+      { name: "Course Structure & Fee", path: "/student/CourseStructureFee" },
+      { name: "Admission Enquiry", path: "/student/university-life" },
+      { name: "Student List", path: "/student/StudentList" },
+      { name: "E-Brochure", path: "/student/E-Brochure" },
       {
         name: "Result",
         path: "javascript:void(0);",
@@ -78,9 +78,9 @@ const menuItems = [
     hasDropdown: true,
     submenu: [
       { name: "Hospital Facility", path: "/facility/hospital-facility" },
-      { name: "College & Other Facilities", path: "/pages/CollegeFacility.php" },
-      { name: "Hostel", path: "/pages/Hostel.php" },
-      { name: "Gym", path: "/pages/fitness-athletics.php" },
+      { name: "College & Other Facilities", path: "/facility/College-facility" },
+      { name: "Hostel", path: "/facility/hostel" },
+      { name: "Gym", path: "/facility/gym" },
     ],
   },
   {
