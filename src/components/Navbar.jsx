@@ -31,7 +31,7 @@ const menuItems = [
       { name: "Course Structure & Fee", path: "/student/course-structure-fee" },
       { name: "Admission Enquiry", path: "/student/admission-enquiry" },
       { name: "Student List", path: "/student/student-list" },
-      { name: "E-Brochure", path: "/pages/E-Brochure.php" },
+      { name: "E-Brochure", path: "/student/E-Brochure" },
       {
         name: "Result",
         path: "javascript:void(0);",
