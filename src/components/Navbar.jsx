@@ -32,16 +32,6 @@ const menuItems = [
       { name: "Admission Enquiry", path: "/student/admission-enquiry" },
       { name: "Student List", path: "/student/student-list" },
       { name: "E-Brochure", path: "/student/E-Brochure" },
-      {
-        name: "Result",
-        path: "javascript:void(0);",
-        hasDropdown: true,
-        submenu: [
-          { name: "BAMS (UG) Result", path: "/pages/BAMS(UG)Result.php" },
-          { name: "MD/MS (AYU) First Year Result June 2022", path: "/pages/AYUFirstYearResult.php" },
-          { name: "MD/MS (Ayu) Final Year Result June 2022", path: "/pages/AyuFinalYearResult.php" },
-        ],
-      },
     ],
   },
   {
@@ -108,12 +98,12 @@ const menuItems = [
   },
   {
     name: "IQAC",
-    path: "/pages/IQAC.php",
+    path: "/pages/IQAC",
     hasDropdown: false,
   },
   {
     name: "E-Library",
-    path: "/pages/E-Library.php",
+    path: "/pages/e-library",
     hasDropdown: false,
   },
 ];

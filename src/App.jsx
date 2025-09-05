@@ -26,6 +26,9 @@ import Hostel from "./page/facilities/Hostel"
 import CoursesAndFees from "./page/student/CoursesAndFees";
 import AdmissionEnquiry from "./page/student/AdmissionEnquiry";
 import StudentList from "./page/student/StudentList";
+import Brochure from "./page/student/E-Brochure"
+import Result from "./page/student/Result";
+import ComingSoon from "./components/ComingSoon";
 
 
 const App = () => {
@@ -57,7 +60,8 @@ const App = () => {
         <Route path="/student/course-structure-fee" element={<CoursesAndFees />} />
         <Route path="/student/admission-enquiry" element={<AdmissionEnquiry />} />
         <Route path="/student/student-list" element={<StudentList />} />
-     
+        <Route path="/student/E-Brochure" element={<Brochure/>}/>
+        <Route path="/student/result" element={<Result/>}/>
 
         {/* Media Pages */}
         <Route path="/media/image-gallery" element={<ImageGallery />} />
@@ -69,6 +73,8 @@ const App = () => {
 
         {/* Contact Pages */}
         <Route path="/contact" element={<Contact />} />
+        <Route path="/pages/IQAC" element={<ComingSoon />} />
+        <Route path="/pages/e-library" element={<ComingSoon />} />
       </Routes>
       <Footer />
       <ApplyNow/>
