@@ -2,7 +2,7 @@
  const pdfData = [
   {
     id: 'ayush',
-    title: 'AYUSH/NCISM PERMISSION 2024-25',
+    title: 'AYUSH/NCISM PERMISSION 2025-26',
     subtitle: 'Permission Letter PDF',
     file: '/documents/majorsdspgamc-AYUSH-NCISM-PERMISSION.pdf',
     download: '/documents/Yearly-Permission-AYU0256.pdf',
