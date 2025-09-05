@@ -28,9 +28,9 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Course Structure & Fee", path: "/pages/CourseStructureFee.php" },
-      { name: "Admission Enquiry", path: "/pages/university-life.php" },
-      { name: "Student List", path: "/pages/StudentList.php" },
+      { name: "Course Structure & Fee", path: "/student/course-structure-fee" },
+      { name: "Admission Enquiry", path: "/student/admission-enquiry" },
+      { name: "Student List", path: "/student/student-list" },
       { name: "E-Brochure", path: "/pages/E-Brochure.php" },
       {
         name: "Result",

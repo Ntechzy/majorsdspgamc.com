@@ -23,6 +23,9 @@ import PrincipalMessage from "./page/about/PrincipalMessage";
 import AwardsAchievements from "./page/about/AwardsAchievements";
 import VideoGallery from "./page/media/VideoGallery";
 import Hostel from "./page/facilities/Hostel"
+import CoursesAndFees from "./page/student/CoursesAndFees";
+import AdmissionEnquiry from "./page/student/AdmissionEnquiry";
+import StudentList from "./page/student/StudentList";
 
 
 const App = () => {
@@ -49,6 +52,11 @@ const App = () => {
         <Route path="/facility/college-facility" element={<CollegeFacilities />} />
         <Route path="/facility/hostel" element={<Hostel/>} />
         <Route path="/facility/gym" element={<Gym/>} />
+
+         {/* Student Pages */}
+        <Route path="/student/course-structure-fee" element={<CoursesAndFees />} />
+        <Route path="/student/admission-enquiry" element={<AdmissionEnquiry />} />
+        <Route path="/student/student-list" element={<StudentList />} />
      
 
         {/* Media Pages */}
