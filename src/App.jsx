@@ -21,6 +21,15 @@ import HeaderTop from "./components/HeaderTop";
 import ApplyNow from "./components/shared/ApplyNow";
 import PrincipalMessage from "./page/about/PrincipalMessage";
 import AwardsAchievements from "./page/about/AwardsAchievements";
+import VideoGallery from "./page/media/VideoGallery";
+import Hostel from "./page/facilities/Hostel"
+import CoursesAndFees from "./page/student/CoursesAndFees";
+import AdmissionEnquiry from "./page/student/AdmissionEnquiry";
+import StudentList from "./page/student/StudentList";
+import Brochure from "./page/student/E-Brochure"
+import Result from "./page/student/Result";
+import ComingSoon from "./components/ComingSoon";
+
 
 const App = () => {
   return (
@@ -43,10 +52,20 @@ const App = () => {
 
         {/* Facility Pages */}
         <Route path="/facility/hospital-facility" element={<HospitalFacility />} />
-     
+        <Route path="/facility/college-facility" element={<CollegeFacilities />} />
+        <Route path="/facility/hostel" element={<Hostel/>} />
+        <Route path="/facility/gym" element={<Gym/>} />
+
+         {/* Student Pages */}
+        <Route path="/student/course-structure-fee" element={<CoursesAndFees />} />
+        <Route path="/student/admission-enquiry" element={<AdmissionEnquiry />} />
+        <Route path="/student/student-list" element={<StudentList />} />
+        <Route path="/student/E-Brochure" element={<Brochure/>}/>
+        <Route path="/student/result" element={<Result/>}/>
 
         {/* Media Pages */}
         <Route path="/media/image-gallery" element={<ImageGallery />} />
+        <Route path="/media/video-gallery" element={<VideoGallery />} />
 
         {/* Hospital Clinical Data */}
         <Route path="/hospital-data/hospital-opd-ipd-data" element={<HospitalData />} />
@@ -54,6 +73,8 @@ const App = () => {
 
         {/* Contact Pages */}
         <Route path="/contact" element={<Contact />} />
+        <Route path="/pages/IQAC" element={<ComingSoon />} />
+        <Route path="/pages/e-library" element={<ComingSoon />} />
       </Routes>
       <Footer />
       <ApplyNow/>

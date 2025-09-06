@@ -28,20 +28,10 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Course Structure & Fee", path: "/pages/CourseStructureFee.php" },
-      { name: "Admission Enquiry", path: "/pages/university-life.php" },
-      { name: "Student List", path: "/pages/StudentList.php" },
-      { name: "E-Brochure", path: "/pages/E-Brochure.php" },
-      {
-        name: "Result",
-        path: "javascript:void(0);",
-        hasDropdown: true,
-        submenu: [
-          { name: "BAMS (UG) Result", path: "/pages/BAMS(UG)Result.php" },
-          { name: "MD/MS (AYU) First Year Result June 2022", path: "/pages/AYUFirstYearResult.php" },
-          { name: "MD/MS (Ayu) Final Year Result June 2022", path: "/pages/AyuFinalYearResult.php" },
-        ],
-      },
+      { name: "Course Structure & Fee", path: "/student/course-structure-fee" },
+      { name: "Admission Enquiry", path: "/student/admission-enquiry" },
+      { name: "Student List", path: "/student/student-list" },
+      { name: "E-Brochure", path: "/student/E-Brochure" },
     ],
   },
   {
@@ -78,9 +68,9 @@ const menuItems = [
     hasDropdown: true,
     submenu: [
       { name: "Hospital Facility", path: "/facility/hospital-facility" },
-      { name: "College & Other Facilities", path: "/pages/CollegeFacility.php" },
-      { name: "Hostel", path: "/pages/Hostel.php" },
-      { name: "Gym", path: "/pages/fitness-athletics.php" },
+      { name: "College & Other Facilities", path: "/facility/College-facility" },
+      { name: "Hostel", path: "/facility/hostel" },
+      { name: "Gym", path: "/facility/gym" },
     ],
   },
   {
@@ -89,16 +79,7 @@ const menuItems = [
     hasDropdown: true,
     submenu: [
       { name: "Image Gallery", path: "/media/image-gallery" },
-      { name: "Video Gallery", path: "/pages/VideoGallery.php" },
-      {
-        name: "Events",
-        path: "javascript:void(0);",
-        hasDropdown: true,
-        submenu: [
-          { name: "Conferences and Academic Activities", path: "/pages/ConferencesandAcademicActivities.php" },
-          { name: "Azadi Ka Amrit Mahotsav", path: "/pages/AzadiKaAmritMahotsav.php" },
-        ],
-      },
+      { name: "Video Gallery", path: "/media/video-gallery" },
     ],
   },
   {
@@ -117,12 +98,12 @@ const menuItems = [
   },
   {
     name: "IQAC",
-    path: "/pages/IQAC.php",
+    path: "/pages/IQAC",
     hasDropdown: false,
   },
   {
     name: "E-Library",
-    path: "/pages/E-Library.php",
+    path: "/pages/e-library",
     hasDropdown: false,
   },
 ];

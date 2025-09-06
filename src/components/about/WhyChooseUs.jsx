@@ -2,6 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { GraduationCap, BookOpen } from "lucide-react";
+import StatsSection from "../home/StatsSection";
 
 const WhyChooseUs = () => {
   return (
@@ -36,7 +37,7 @@ const WhyChooseUs = () => {
             Why <span className="text-[#fbb20e]">Choose Us</span>
           </h2>
           <p className="text-gray-600 text-lg mb-6">
-            Major S D Singh Ayurvedic Medical College is a leading institute guiding students in Ayurveda through BAMS and MD/MS programs with academic and professional excellence.
+            Major S D Singh Ayurvedic Medical College is a leading institute guiding students in Ayurveda through BAMS and MD program with academic and professional excellence.
           </p>
           <ul className="space-y-3 text-gray-700 list-disc list-inside">
             <li>Recognized by AYUSH, CCIM, CSJMU & UP Govt.</li>
@@ -48,36 +49,7 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Stats */}
-      <div className="mt-16 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div className="space-y-2">
-          <GraduationCap className="mx-auto text-purple-600" size={36} />
-          <h3 className="text-3xl font-bold text-gray-900">
-            <CountUp end={124} duration={3} />+
-          </h3>
-          <p className="text-sm text-gray-600">Graduate Programs</p>
-        </div>
-        <div className="space-y-2">
-          <BookOpen className="mx-auto text-green-600" size={36} />
-          <h3 className="text-3xl font-bold text-gray-900">
-            <CountUp end={393} duration={3} />+
-          </h3>
-          <p className="text-sm text-gray-600">Best Courses</p>
-        </div>
-        <div className="space-y-2">
-          <GraduationCap className="mx-auto text-blue-600" size={36} />
-          <h3 className="text-3xl font-bold text-gray-900">
-            <CountUp end={2000} duration={3} />+
-          </h3>
-          <p className="text-sm text-gray-600">Successful Alumni</p>
-        </div>
-        <div className="space-y-2">
-          <BookOpen className="mx-auto text-rose-600" size={36} />
-          <h3 className="text-3xl font-bold text-gray-900">
-            <CountUp end={95} duration={3} />%
-          </h3>
-          <p className="text-sm text-gray-600">Satisfaction Rate</p>
-        </div>
-      </div>
+     <StatsSection/>
     </section>
   );
 };
