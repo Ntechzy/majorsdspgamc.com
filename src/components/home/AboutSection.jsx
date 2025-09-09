@@ -8,7 +8,7 @@ const AboutSection = () => {
         {/* Left: Image Section */}
         <div className="w-full lg:w-1/2">
           <img
-            src="/about4.jpg"
+            src="/about5.jpg"
             alt="About Us"
             className="w-full h-auto"
           />
@@ -39,7 +39,7 @@ const AboutSection = () => {
               <div>
                 <h3 className="text-lg font-semibold">Courses Offered</h3>
                 <p className="text-gray-600 text-sm mt-1">
-                  B.A.M.S. (4.5 years, 100 seats) and M.D./M.S. Ayurveda (3 years, 30 seats) with emphasis on holistic development.
+                  B.A.M.S. (4.5 years, 100 seats) and M.D./M.S. Ayurveda (3 years, 12  seats) with emphasis on holistic development.
                 </p>
               </div>
             </div>
