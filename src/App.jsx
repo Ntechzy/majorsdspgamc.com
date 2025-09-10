@@ -29,6 +29,7 @@ import StudentList from "./page/student/StudentList";
 import Brochure from "./page/student/E-Brochure"
 import Result from "./page/student/Result";
 import ComingSoon from "./components/ComingSoon";
+import AdminDashboard from "./page/admin/AdminDashboard";
 
 
 const App = () => {
@@ -75,6 +76,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/pages/IQAC" element={<ComingSoon />} />
         <Route path="/pages/e-library" element={<ComingSoon />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard/>}></Route>
       </Routes>
       <Footer />
       <ApplyNow/>
