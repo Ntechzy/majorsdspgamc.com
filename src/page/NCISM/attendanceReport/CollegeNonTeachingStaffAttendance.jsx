@@ -5,7 +5,9 @@ import PageBanner from "../../../components/shared/PageBanner";
 const CollegeNonTeachingStaffAttendance = () => {
   return (
     <>
-      <div className="mb-10"><PageBanner title="College Non Teaching Staff Attendance" /></div>
+      <div className="mb-10">
+        <PageBanner title="College Non Teaching Staff Attendance" />
+      </div>
       <PdfViewer
         title="COLLEGE NON-TEACHING STAFF ATTENDANCE (JANUARY 2025)"
         src={

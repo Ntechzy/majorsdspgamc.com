@@ -26,8 +26,8 @@ const PrincipleMedical = () => {
         <p className="text-gray-700 max-w-3xl mx-auto text-base md:text-lg">
           Welcome to Major S.D. Singh College! As the Principal and Hospital
           Superintendent, I am honored to lead an institution that fosters
-          academic excellence, holistic growth, and compassionate healthcare.
-          We are dedicated to shaping future leaders who uplift society through
+          academic excellence, holistic growth, and compassionate healthcare. We
+          are dedicated to shaping future leaders who uplift society through
           knowledge and service.
         </p>
       </div>
@@ -55,7 +55,9 @@ const PrincipleMedical = () => {
           <div className="grid gap-3 text-gray-700 pt-4 text-sm md:text-base">
             <div className="flex items-start gap-3">
               <MapPin className="text-[#13AAE8]" />
-              <span>1/31, Nagla Deena, Po. Fatehgarh, Dist. Farrukhabad (U.P.)</span>
+              <span>
+                1/31, Nagla Deena, Po. Fatehgarh, Dist. Farrukhabad (U.P.)
+              </span>
             </div>
 
             <div className="flex items-center gap-3">
