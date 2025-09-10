@@ -71,9 +71,7 @@ const HeroSection = () => {
                     className="text-white/90 text-sm md:text-base lg:text-lg mt-2 mb-8 max-w-2xl leading-relaxed"
                     variants={itemVariants}
                 >
-                    There are many variations of passages of Lorem Ipsum available but the
-                    majority have suffered alteration in some repeat predefined chunks
-                    form injected humour.
+                    Building doctors, shaping lives. At Major S.D. Singh Medical College, we prepare healthcare leaders who combine knowledge, skill, and compassion to transform the future of medicine.
                 </motion.p>
             </motion.div>
         </div>
