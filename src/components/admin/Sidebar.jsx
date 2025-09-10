@@ -9,7 +9,13 @@ const Sidebar = ({ menuConfig, onSelect }) => {
         <h2 className="text-xl font-bold">Admin Panel</h2>
       </div>
 
-      <ul className="flex-1 overflow-y-auto px-4 py-6 space-y-3">
+      {/* Sidebar Menu with hidden scrollbar */}
+      <ul
+        className="flex-1 overflow-y-auto px-4 py-6 space-y-3"
+        style={{
+          scrollbarWidth: "none", // Firefox
+        }}
+      >
         {Object.entries(menuConfig).map(([key, section]) => (
           <div key={key}>
             <li
@@ -38,9 +44,14 @@ const Sidebar = ({ menuConfig, onSelect }) => {
         ))}
       </ul>
 
-      <div className="p-4 border-t border-gray-700 text-center text-xs text-gray-400">
-        © 2025 Major SD Singh
-      </div>
+      
+
+      {/* Additional CSS to hide scrollbar in Webkit browsers */}
+      <style jsx>{`
+        ul::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </div>
   );
 };

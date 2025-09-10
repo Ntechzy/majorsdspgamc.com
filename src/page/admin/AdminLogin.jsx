@@ -3,25 +3,14 @@ import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
-  const [token, setToken] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Token validation
-    if (token.length !== 6 || !/^\d+$/.test(token)) {
-      setError("Token must be exactly 6 digits.");
-      return;
-    }
-
-    setError(""); // clear error if valid
-
     // Handle login logic here (e.g., API call)
     console.log("Email:", email);
-    console.log("Token:", token);
     console.log("Password:", password);
 
     // Redirect to dashboard after successful login
@@ -55,21 +44,6 @@ const AdminLogin = () => {
 
           <div>
             <label className="block text-left text-sm font-medium text-[#1c2c4c] mb-2">
-              6-Digit Token
-            </label>
-            <input
-              type="text"
-              value={token}
-              onChange={(e) => setToken(e.target.value)}
-              maxLength={6}
-              placeholder="Enter your token"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#13AAE8] focus:border-[#13AAE8] transition tracking-widest text-center font-mono"
-              required
-            />
-          </div>
-
-          <div>
-            <label className="block text-left text-sm font-medium text-[#1c2c4c] mb-2">
               Password
             </label>
             <input
@@ -81,8 +55,6 @@ const AdminLogin = () => {
               required
             />
           </div>
-
-          {error && <p className="text-red-500 text-sm">{error}</p>}
 
           <button
             type="submit"
