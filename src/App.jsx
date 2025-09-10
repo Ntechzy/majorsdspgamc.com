@@ -38,6 +38,8 @@ import AdmissionEnquiry from "./page/student/AdmissionEnquiry";
 import StudentList from "./page/student/StudentList";
 import Brochure from "./page/student/E-Brochure";
 import Result from "./page/student/Result";
+import ComingSoon from "./components/ComingSoon";
+import AdminDashboard from "./page/admin/AdminDashboard";
 
 // Media
 import ImageGallery from "./page/media/ImageGallery";
@@ -95,6 +97,7 @@ const App = () => {
 
         {/* Admin */}
         <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard/>}></Route>
       </Routes>
 
       <Footer />
