@@ -1,11 +1,21 @@
-import React from 'react'
-import UploadTable from '../../components/admin/UploadTable'
+import React from 'react';
+import UploadTable from '../../components/admin/UploadTable';
+import Sidebar from '../../components/admin/Sidebar';
+
 const AdminDashboard = () => {
   return (
-    <>
-    <UploadTable/>
-    </>
-  )
-}
+    <div className="flex min-h-screen bg-gray-50">
+      {/* Sidebar */}
+      <div className="w-70 bg-white shadow-md">
+        <Sidebar />
+      </div>
 
-export default AdminDashboard
+      {/* Main Content */}
+      <div className="flex-1 p-6 overflow-auto">
+        <UploadTable />
+      </div>
+    </div>
+  );
+};
+
+export default AdminDashboard;
