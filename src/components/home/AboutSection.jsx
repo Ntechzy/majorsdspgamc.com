@@ -39,7 +39,7 @@ const AboutSection = () => {
               <div>
                 <h3 className="text-lg font-semibold">Courses Offered</h3>
                 <p className="text-gray-600 text-sm mt-1">
-                  B.A.M.S. (4.5 years, 100 seats) and M.D./M.S. Ayurveda (3 years, 12  seats) with emphasis on holistic development.
+                  B.A.M.S. (4.5 years, 100 seats) and M.S. Ayurveda (3 years, 12 seats) with emphasis on holistic development.
                 </p>
               </div>
             </div>

@@ -1,10 +1,10 @@
 // src/data/pdfData.js
- const pdfData = [
+const pdfData = [
   {
     id: 'ayush',
     title: 'AYUSH/NCISM PERMISSION 2025-26',
     subtitle: 'Permission Letter PDF',
-    file: '/documents/majorsdspgamc-AYUSH-NCISM-PERMISSION.pdf',
+    file: '/documents/Yearly-Permission-AYU0256.pdf',
     download: '/documents/Yearly-Permission-AYU0256.pdf',
     downloadText: 'Download Permission Letter',
   },

@@ -5,8 +5,7 @@ import Image3 from "/asset/InstaPost/Post3.jpg";
 import Image4 from "/asset/InstaPost/Post4.jpg";
 
 const posts = [
-  { image: Image1, link: "https://www.instagram.com/majorsdsinghpg/" },
-  { image: Image2, link: "https://www.instagram.com/majorsdsinghpg/" },
+  { image: Image1, link: "https://www.instagram.com/majorsdsinghpg/" }, 
   { image: Image3, link: "https://www.instagram.com/majorsdsinghpg/" },
   { image: Image4, link: "https://www.instagram.com/majorsdsinghpg/" },
 ];
