@@ -29,6 +29,19 @@ import StudentList from "./page/student/StudentList";
 import Brochure from "./page/student/E-Brochure"
 import Result from "./page/student/Result";
 import ComingSoon from "./components/ComingSoon";
+import TeachingStaff from "./page/NCISM/TeachingStaff";
+import IntakeCapacity from "./page/NCISM/IntakeCapacity";
+import NonTeachingStaff from "./page/NCISM/NonTeachingStaff";
+import StudentDetails from "./page/NCISM/StudentDetails";
+import ResearchPublication from "./page/NCISM/ResearchPublication";
+import ConferencesandAcademicActivities from "./page/NCISM/ConferencesandAcademicActivities";
+import BAMSStudentsAttendance from "./page/NCISM/attendanceReport/BAMSStudentsAttendance";
+import Affiliation from "./page/NCISM/Affiliation";
+import ClinicalMaterialinHospital from "./page/NCISM/ClinicalMaterialinHospital";
+import HospitalOPD_IPD_Data from "./page/NCISM/HospitalOPD_IPD_Data";
+import HospitalNonTeachingStaffAttendance from "./page/NCISM/attendanceReport/HospitalNonTeachingStaffAttendance";
+import CollegeNonTeachingStaffAttendance from "./page/NCISM/attendanceReport/CollegeNonTeachingStaffAttendance";
+import TeachingStaffAttendance from "./page/NCISM/attendanceReport/TeachingStaffAttendance";
 
 
 const App = () => {
@@ -75,6 +88,21 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/pages/IQAC" element={<ComingSoon />} />
         <Route path="/pages/e-library" element={<ComingSoon />} />
+
+        {/* NCISM Pages */}
+        <Route path="/pages/TeachingStaff" element={<TeachingStaff />} />
+        <Route path="/pages/IntakeCapacity" element={<IntakeCapacity />} />
+        <Route path="/pages/NonTeachingStaff" element={<NonTeachingStaff />} />
+        <Route path="/pages/StudentDetails" element={<StudentDetails />} />
+        <Route path="/pages/ResearchPublication" element={<ResearchPublication />} />
+        <Route path="/pages/ConferencesandAcademicActivities" element={<ConferencesandAcademicActivities />} />
+        <Route path="/pages/BAMSStudentsAttendance" element={<BAMSStudentsAttendance />} />
+        <Route path="/pages/HospitalNonTeachingStaffAttendance" element={<HospitalNonTeachingStaffAttendance />} />
+        <Route path="/pages/CollegeNonTeachingStaffAttendance" element={<CollegeNonTeachingStaffAttendance />} />
+        <Route path="/pages/TeachingStaffAttendance" element={<TeachingStaffAttendance />} />
+        <Route path="/pages/Affiliation" element={<Affiliation />} />
+        <Route path="/pages/ClinicalMaterialinHospital" element={<ClinicalMaterialinHospital />} />
+        <Route path="/pages/HospitalOPD_IPD_Data" element={<HospitalOPD_IPD_Data />} />
       </Routes>
       <Footer />
       <ApplyNow/>
