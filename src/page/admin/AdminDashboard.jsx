@@ -9,15 +9,35 @@ const AdminDashboard = () => {
 
   const renderContent = () => {
     if (!selected) {
-      return <div className="p-6 text-gray-500 text-3xl">Please select a menu item</div>;
+      return (
+        <div className="p-6 text-gray-400 text-3xl font-semibold text-center mt-20">
+          Please select a menu item
+        </div>
+      );
     }
 
     if (selected.type === "file") {
-      return <UploadFiles api={selected.api} />;
+      return (
+        <div className="space-y-6">
+          <h1 className="text-center text-4xl font-bold text-gray-800">
+            {selected.label}
+          </h1>
+          <UploadFiles api={selected.api} />
+        </div>
+      );
     }
+
     if (selected.type === "table") {
-      return <UploadTable api={selected.api} />;
+      return (
+        <div className="space-y-6">
+          <h1 className="text-center text-4xl font-bold text-gray-800">
+            {selected.label}
+          </h1>
+          <UploadTable api={selected.api} />
+        </div>
+      );
     }
+
     return null;
   };
 

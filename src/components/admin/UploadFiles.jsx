@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  LuUpload,
-  LuFile,
-  LuImage,
-  LuFileText,
-  LuMusic,
-  LuVideo,
-  LuX,
-} from "react-icons/lu";
+import { LuUpload, LuFile, LuFileText, LuMusic, LuVideo, LuX } from "react-icons/lu";
 
 const UploadFiles = () => {
   const [files, setFiles] = useState([]);
@@ -16,8 +8,7 @@ const UploadFiles = () => {
     const selected = Array.from(e.target.files);
     const mapped = selected.map((file) => ({
       file,
-      preview:
-        file.type.startsWith("image/") ? URL.createObjectURL(file) : null,
+      preview: file.type.startsWith("image/") ? URL.createObjectURL(file) : null,
     }));
     setFiles((prev) => [...prev, ...mapped]);
   };
@@ -39,7 +30,7 @@ const UploadFiles = () => {
         <img
           src={preview}
           alt={file.name}
-          className="w-full h-32 object-cover rounded-md"
+          className="w-full h-32 object-cover rounded-md border border-gray-300"
         />
       );
     }
@@ -75,45 +66,38 @@ const UploadFiles = () => {
     );
   };
 
-  // Handle Submit
   const handleSubmit = () => {
     if (files.length === 0) {
       alert("Please select at least one file before submitting.");
       return;
     }
-
-    // Example: log files to console
     console.log("Submitted files:", files.map((f) => f.file));
-
-    // Here you can call an API to upload files to backend
     alert(`You submitted ${files.length} file(s)!`);
   };
 
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
-      <h2 className="text-xl font-bold text-black mb-4">Upload Files</h2>
+    <div className="flex flex-col justify-center items-center p-6 bg-white rounded-2xl shadow-lg border border-gray-200 max-w-5xl mx-auto">
+      <h2 className="text-2xl font-bold text-gray-800 mb-6">Upload Files</h2>
 
       {/* Upload button */}
-      <label className="cursor-pointer px-4 py-2 rounded-lg flex items-center justify-center gap-2 text-white bg-[#f8a713] hover:opacity-90 transition w-fit">
-        <LuUpload size={20} />
+      <label className="cursor-pointer px-5 py-3 rounded-lg flex items-center justify-center gap-3 text-white bg-gradient-to-r from-yellow-400 to-orange-500 hover:opacity-90 transition shadow-md">
+        <LuUpload size={22} />
         <span>Select Files</span>
         <input type="file" multiple onChange={handleFiles} className="hidden" />
       </label>
 
       {/* Preview Section */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 mt-6 w-full">
         {files.map((fileObj, index) => (
           <div
             key={index}
-            className="relative bg-gray-100 p-2 rounded-lg shadow-sm border border-gray-200"
+            className="relative bg-gray-50 p-3 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition"
           >
             {renderPreview(fileObj)}
-            <p className="text-xs mt-2 truncate text-center text-black">
-              {fileObj.file.name}
-            </p>
+            <p className="text-xs mt-2 truncate text-center text-gray-800">{fileObj.file.name}</p>
             <button
               onClick={() => removeFile(index)}
-              className="absolute top-1 right-1 bg-red-600 text-white p-1 rounded-full hover:bg-red-700"
+              className="absolute top-2 right-2 bg-red-600 text-white p-1 rounded-full hover:bg-red-700 transition"
             >
               <LuX size={14} />
             </button>
@@ -126,7 +110,7 @@ const UploadFiles = () => {
         <div className="mt-6">
           <button
             onClick={handleSubmit}
-            className="px-5 py-2 bg-[#287e18] text-white rounded-lg font-medium hover:opacity-90 transition"
+            className="px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 shadow-md transition"
           >
             Submit Files
           </button>
