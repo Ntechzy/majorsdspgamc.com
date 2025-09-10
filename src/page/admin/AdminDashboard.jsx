@@ -1,23 +1,30 @@
-import React from 'react';
-import UploadTable from '../../components/admin/UploadTable';
-import Sidebar from '../../components/admin/Sidebar';
-import UploadFiles from '../../components/admin/UploadFiles';
+import React, { useState } from "react";
+import Sidebar from "../../components/admin/Sidebar";
+import UploadFiles from "../../components/admin/UploadFiles";
+import UploadTable from "../../components/admin/UploadTable";
+import { menuConfig } from "../../data/menuConfig";
 
 const AdminDashboard = () => {
-  return (
-    <div className="flex min-h-screen bg-gray-50">
-      {/* Sidebar */}
-      <div className="w-70 bg-white shadow-md">
-        <Sidebar />
-      </div>
+  const [selected, setSelected] = useState(null);
 
-      {/* Main Content */}
-      <div className="flex-1 p-6 overflow-auto" >
-        <UploadFiles/>
-              <div className="overflow-auto mt-4">
-         <UploadTable />
-      </div>
-      </div>
+  const renderContent = () => {
+    if (!selected) {
+      return <div className="p-6 text-gray-500 text-3xl">Please select a menu item</div>;
+    }
+
+    if (selected.type === "file") {
+      return <UploadFiles api={selected.api} />;
+    }
+    if (selected.type === "table") {
+      return <UploadTable api={selected.api} />;
+    }
+    return null;
+  };
+
+  return (
+    <div className="flex min-h-screen">
+      <Sidebar menuConfig={menuConfig} onSelect={setSelected} />
+      <div className="flex-1 bg-gray-50 p-6">{renderContent()}</div>
     </div>
   );
 };
