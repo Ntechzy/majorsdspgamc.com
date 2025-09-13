@@ -21,7 +21,7 @@ const Footer = () => {
           </p>
           <p className="mb-4 text-gray-300">
             College offers B.A.M.S. Course of 4.5 years (100 Seats) and
-            M.D./M.S. (Ayurveda) of 3 Years (30 seats).
+            M.D./M.S. (Ayurveda) of 3 Years (12 seats).
           </p>
           <div className="mt-6">
             <h4 className="font-semibold mb-3">Follow Us</h4>
