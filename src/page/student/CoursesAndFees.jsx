@@ -4,14 +4,17 @@ import PageBanner from "../../components/shared/PageBanner";
 const courses = [
   {
     title: "Bachelor of Ayurvedic Medicine and Surgery (B.A.M.S.)",
-    feeDetails: {
-      admission: "as Depend on NCISM*",
-      tuition: "as Depend on NCISM*",
-      lab: "as Depend on NCISM*",
-      seats: "100",
-      duration: "4.5 Yrs",
-      transport: "as Depend on NCISM*",
-    },
+feeDetails: {
+  admission: "As per NCISM*",
+  tuition: "₹2,59,200 per year",
+  hostel: "₹1,00,000 per year",
+  caution: "₹40,800 (Refundable)",
+  lab: "As per NCISM*",
+  seats: "100",
+  duration: "4.5 Yrs",
+  transport: "As per NCISM*",
+},
+
   },
   {
     title: "Prasuti Tantra Avum Stri Rog",
@@ -120,38 +123,32 @@ const CoursesAndFees = () => {
                 {openIndex === index && (
                   <div className="p-6 bg-gray-50 animate-fadeIn">
                     <table className="w-full text-sm border rounded-lg overflow-hidden shadow-sm">
-                      <tbody>
-                        {[
-                          ["Admission Fee", course.feeDetails.admission],
-                          ["Tuition Fees", course.feeDetails.tuition],
-                          ["Lab Fee", course.feeDetails.lab],
-                          ["Available Seats", course.feeDetails.seats],
-                          ["Duration", course.feeDetails.duration],
-                          ["Transport Fee", course.feeDetails.transport],
-                        ].map(([label, value], i) => (
-                          <tr
-                            key={i}
-                            className={`${
-                              i % 2 === 0 ? "bg-white" : "bg-gray-100"
-                            }`}
-                          >
-                            <td className="py-3 px-4 font-medium text-gray-600">
-                              {label}
-                            </td>
-                            <td className="py-3 px-4 text-right text-gray-700">
-                              {value}
-                            </td>
-                          </tr>
-                        ))}
-                        <tr className="bg-[#ebf8fa]">
-                          <td className="py-3 px-4 font-bold text-[#0aadc4]">
-                            Total Fees
-                          </td>
-                          <td className="py-3 px-4 text-right font-bold text-[#0aadc4]">
-                            {total}
-                          </td>
-                        </tr>
-                      </tbody>
+                     <tbody>
+  {[
+    ["Admission Fee", course.feeDetails.admission],
+    ["Tuition Fees", course.feeDetails.tuition],
+    ["Hostel Fee", course.feeDetails.hostel],   // ✅ Added
+    ["Lab Fee", course.feeDetails.lab],
+    ["Available Seats", course.feeDetails.seats],
+    ["Duration", course.feeDetails.duration],
+    ["Transport Fee", course.feeDetails.transport],
+  ].map(([label, value], i) => (
+    <tr
+      key={i}
+      className={`${i % 2 === 0 ? "bg-white" : "bg-gray-100"}`}
+    >
+      <td className="py-3 px-4 font-medium text-gray-600">{label}</td>
+      <td className="py-3 px-4 text-right text-gray-700">{value}</td>
+    </tr>
+  ))}
+  <tr className="bg-[#ebf8fa]">
+    <td className="py-3 px-4 font-bold text-[#0aadc4]">Total Fees</td>
+    <td className="py-3 px-4 text-right font-bold text-[#0aadc4]">
+      {total}
+    </td>
+  </tr>
+</tbody>
+
                     </table>
                   </div>
                 )}
