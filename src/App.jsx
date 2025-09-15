@@ -47,6 +47,7 @@ import VideoGallery from "./page/media/VideoGallery";
 
 // Admin
 import AdminLogin from "./page/admin/AdminLogin";
+import AdminSignup from "./page/admin/AdminSignup"
 
 const App = () => {
   return (
@@ -98,6 +99,7 @@ const App = () => {
         {/* Admin */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard/>}></Route>
+         <Route path="/admin/signup" element={<AdminSignup />} />
       </Routes>
 
       <Footer />
