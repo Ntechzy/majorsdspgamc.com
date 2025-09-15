@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { registerUser } from "../../redux/slices/authSlice"; // 👈 import register thunk
+import { registerUser } from "../../redux/slices/authSlice"; 
+import { toast } from "react-toastify"; // ✅ import toast
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -11,7 +12,7 @@ const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { loading, error } = useSelector((state) => state.auth);
+  const { loading } = useSelector((state) => state.auth);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,12 +20,15 @@ const Signup = () => {
     const result = await dispatch(registerUser({ name, email, password }));
 
     if (registerUser.fulfilled.match(result)) {
-      navigate("/admin/login"); // ✅ redirect on success
+      toast.success("Signup successful! You can now login."); // ✅ success toast
+      navigate("/admin/login"); 
+    } else {
+      toast.error(result.payload?.message || "Signup failed ❌"); // ❌ error toast
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#fefefe] to-[#f9fafb] px-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#fefefe] to-[#8c9196] px-6">
       <div className="w-full max-w-md bg-white -mt-[100px] shadow-lg rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-center text-[#1c2c4c] mb-2">Create Account</h2>
         <p className="text-center text-gray-500 mb-8">
@@ -33,9 +37,7 @@ const Signup = () => {
 
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
-            <label className="block text-left text-sm font-medium text-[#1c2c4c] mb-2">
-              Full Name
-            </label>
+            <label className="block text-left text-sm font-medium text-[#1c2c4c] mb-2">Full Name</label>
             <input
               type="text"
               value={name}
@@ -47,9 +49,7 @@ const Signup = () => {
           </div>
 
           <div>
-            <label className="block text-left text-sm font-medium text-[#1c2c4c] mb-2">
-              Email Address
-            </label>
+            <label className="block text-left text-sm font-medium text-[#1c2c4c] mb-2">Email Address</label>
             <input
               type="email"
               value={email}
@@ -61,9 +61,7 @@ const Signup = () => {
           </div>
 
           <div>
-            <label className="block text-left text-sm font-medium text-[#1c2c4c] mb-2">
-              Password
-            </label>
+            <label className="block text-left text-sm font-medium text-[#1c2c4c] mb-2">Password</label>
             <input
               type="password"
               value={password}
@@ -82,8 +80,6 @@ const Signup = () => {
             {loading ? "Signing up..." : "Sign Up"}
           </button>
         </form>
-
-        {error && <p className="text-red-500 mt-4">{error.message || error}</p>}
 
         <div className="flex justify-center mt-6 text-sm text-gray-500">
           <p>
