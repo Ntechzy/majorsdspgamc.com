@@ -6,8 +6,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/Whatsapp";
 import HeaderTop from "./components/HeaderTop";
-import ApplyNow from "./components/shared/ApplyNow";
 import ComingSoon from "./components/ComingSoon";
+import ApplyNow from "./components/shared/ApplyNow";
 
 // Pages
 import Home from "./page/Home";
@@ -19,7 +19,6 @@ import DirectorMessage from "./page/about/DirectorMessage";
 import ApprovalAffiliation from "./page/about/ApprovalAffiliation";
 import PrincipalMessage from "./page/about/PrincipalMessage";
 import AwardsAchievements from "./page/about/AwardsAchievements";
-
 import Contact from "./page/Contact";
 
 // Hospital
@@ -39,15 +38,29 @@ import StudentList from "./page/student/StudentList";
 import Brochure from "./page/student/E-Brochure";
 import Result from "./page/student/Result";
 
-import AdminDashboard from "./page/admin/AdminDashboard";
-
 // Media
 import ImageGallery from "./page/media/ImageGallery";
 import VideoGallery from "./page/media/VideoGallery";
 
 // Admin
+import AdminDashboard from "./page/admin/AdminDashboard";
 import AdminLogin from "./page/admin/AdminLogin";
-import AdminSignup from "./page/admin/AdminSignup"
+import AdminSignup from "./page/admin/AdminSignup";
+
+// NCISM
+import TeachingStaff from "./page/NCISM/TeachingStaff";
+import IntakeCapacity from "./page/NCISM/IntakeCapacity";
+import NonTeachingStaff from "./page/NCISM/NonTeachingStaff";
+import StudentDetails from "./page/NCISM/StudentDetails";
+import ResearchPublication from "./page/NCISM/ResearchPublication";
+import ConferencesandAcademicActivities from "./page/NCISM/ConferencesandAcademicActivities";
+import BAMSStudentsAttendance from "./page/NCISM/attendanceReport/BAMSStudentsAttendance";
+import Affiliation from "./page/NCISM/Affiliation";
+import ClinicalMaterialinHospital from "./page/NCISM/ClinicalMaterialinHospital";
+import HospitalOPD_IPD_Data from "./page/NCISM/HospitalOPD_IPD_Data";
+import HospitalNonTeachingStaffAttendance from "./page/NCISM/attendanceReport/HospitalNonTeachingStaffAttendance";
+import CollegeNonTeachingStaffAttendance from "./page/NCISM/attendanceReport/CollegeNonTeachingStaffAttendance";
+import TeachingStaffAttendance from "./page/NCISM/attendanceReport/TeachingStaffAttendance";
 
 const App = () => {
   return (
@@ -58,6 +71,10 @@ const App = () => {
       <Routes>
         {/* Home */}
         <Route path="/" element={<Home />} />
+        <Route
+          path="/page/principal-medical-superintendent"
+          element={<PrincipleMedical />}
+        />
 
         {/* About Pages */}
         <Route path="/about/about-college" element={<AboutCollege />} />
@@ -68,13 +85,9 @@ const App = () => {
         <Route path="/about/approvalaffiliation" element={<ApprovalAffiliation />} />
         <Route path="/about/awards-achievements" element={<AwardsAchievements />} />
 
-        {/* Hospital Clinical Data */}
-        <Route path="/hospital-data/hospital-opd-ipd-data" element={<HospitalData />} />
-        <Route path="/hospital-data/otherhospitaldata" element={<OtherHospitalData />} />
-
-        {/* Facilities */}
-        <Route path="/facility/college-facility" element={<CollegeFacilities />} />
+        {/* Facility Pages */}
         <Route path="/facility/hospital-facility" element={<HospitalFacility />} />
+        <Route path="/facility/college-facility" element={<CollegeFacilities />} />
         <Route path="/facility/hostel" element={<Hostel />} />
         <Route path="/facility/gym" element={<Gym />} />
 
@@ -85,9 +98,13 @@ const App = () => {
         <Route path="/student/e-brochure" element={<Brochure />} />
         <Route path="/student/result" element={<Result />} />
 
-        {/* Media */}
+        {/* Media Pages */}
         <Route path="/media/image-gallery" element={<ImageGallery />} />
         <Route path="/media/video-gallery" element={<VideoGallery />} />
+
+        {/* Hospital Clinical Data */}
+        <Route path="/hospital-data/hospital-opd-ipd-data" element={<HospitalData />} />
+        <Route path="/hospital-data/otherhospitaldata" element={<OtherHospitalData />} />
 
         {/* Contact */}
         <Route path="/contact" element={<Contact />} />
@@ -98,8 +115,23 @@ const App = () => {
 
         {/* Admin */}
         <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin/dashboard" element={<AdminDashboard/>}></Route>
-         <Route path="/admin/signup" element={<AdminSignup />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/signup" element={<AdminSignup />} />
+
+        {/* NCISM Pages */}
+        <Route path="/pages/TeachingStaff" element={<TeachingStaff />} />
+        <Route path="/pages/IntakeCapacity" element={<IntakeCapacity />} />
+        <Route path="/pages/NonTeachingStaff" element={<NonTeachingStaff />} />
+        <Route path="/pages/StudentDetails" element={<StudentDetails />} />
+        <Route path="/pages/ResearchPublication" element={<ResearchPublication />} />
+        <Route path="/pages/ConferencesandAcademicActivities" element={<ConferencesandAcademicActivities />} />
+        <Route path="/pages/BAMSStudentsAttendance" element={<BAMSStudentsAttendance />} />
+        <Route path="/pages/HospitalNonTeachingStaffAttendance" element={<HospitalNonTeachingStaffAttendance />} />
+        <Route path="/pages/CollegeNonTeachingStaffAttendance" element={<CollegeNonTeachingStaffAttendance />} />
+        <Route path="/pages/TeachingStaffAttendance" element={<TeachingStaffAttendance />} />
+        <Route path="/pages/Affiliation" element={<Affiliation />} />
+        <Route path="/pages/ClinicalMaterialinHospital" element={<ClinicalMaterialinHospital />} />
+        <Route path="/pages/HospitalOPD_IPD_Data" element={<HospitalOPD_IPD_Data />} />
       </Routes>
 
       <Footer />
