@@ -1,7 +1,19 @@
 import React, { useState } from "react";
-import { LuUpload, LuFile, LuFileText, LuMusic, LuVideo, LuX } from "react-icons/lu";
+import { useDispatch, useSelector } from "react-redux";
+import { uploadFiles } from "../../redux/slices/fileSlice"; // ✅ import from slice
+import {
+  LuUpload,
+  LuFile,
+  LuFileText,
+  LuMusic,
+  LuVideo,
+  LuX,
+} from "react-icons/lu";
 
-const UploadFiles = () => {
+const UploadFiles = ({ title, page, category }) => {
+  const dispatch = useDispatch();
+  const { loading, error, message } = useSelector((state) => state.files);
+
   const [files, setFiles] = useState([]);
 
   const handleFiles = (e) => {
@@ -20,6 +32,26 @@ const UploadFiles = () => {
     }
     updated.splice(index, 1);
     setFiles(updated);
+  };
+
+  const handleSubmit = () => {
+    if (files.length === 0) {
+      alert("Please select at least one file before submitting.");
+      return;
+    }
+
+    const formData = new FormData();
+    files.forEach((f) => {
+      formData.append("files", f.file); // backend expects `files`
+    });
+    formData.append("title", title || "Untitled");
+    formData.append("page", page || "general");
+    formData.append("category", category || "others");
+
+    dispatch(uploadFiles(formData));
+
+    // cleanup
+    setFiles([]);
   };
 
   const renderPreview = (fileObj) => {
@@ -66,18 +98,11 @@ const UploadFiles = () => {
     );
   };
 
-  const handleSubmit = () => {
-    if (files.length === 0) {
-      alert("Please select at least one file before submitting.");
-      return;
-    }
-    console.log("Submitted files:", files.map((f) => f.file));
-    alert(`You submitted ${files.length} file(s)!`);
-  };
-
   return (
     <div className="flex flex-col justify-center items-center p-6 bg-white rounded-2xl shadow-lg border border-gray-200 max-w-5xl mx-auto">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Upload Files</h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-6">
+        Upload Files {category ? `(${category})` : ""}
+      </h2>
 
       {/* Upload button */}
       <label className="cursor-pointer px-5 py-3 rounded-lg flex items-center justify-center gap-3 text-white bg-gradient-to-r from-yellow-400 to-orange-500 hover:opacity-90 transition shadow-md">
@@ -85,6 +110,13 @@ const UploadFiles = () => {
         <span>Select Files</span>
         <input type="file" multiple onChange={handleFiles} className="hidden" />
       </label>
+
+      {/* Status messages */}
+      {loading && (
+        <p className="text-blue-600 mt-4 font-medium">Uploading...</p>
+      )}
+      {error && <p className="text-red-500 mt-4">{error}</p>}
+      {message && <p className="text-green-600 mt-4">{message}</p>}
 
       {/* Preview Section */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 mt-6 w-full">
@@ -94,7 +126,9 @@ const UploadFiles = () => {
             className="relative bg-gray-50 p-3 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition"
           >
             {renderPreview(fileObj)}
-            <p className="text-xs mt-2 truncate text-center text-gray-800">{fileObj.file.name}</p>
+            <p className="text-xs mt-2 truncate text-center text-gray-800">
+              {fileObj.file.name}
+            </p>
             <button
               onClick={() => removeFile(index)}
               className="absolute top-2 right-2 bg-red-600 text-white p-1 rounded-full hover:bg-red-700 transition"

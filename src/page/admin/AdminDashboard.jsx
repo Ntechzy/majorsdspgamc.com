@@ -10,41 +10,49 @@ const AdminDashboard = () => {
   const renderContent = () => {
     if (!selected) {
       return (
-        <div className="p-6 text-gray-400 text-3xl font-semibold text-center mt-20">
+        <div className="p-6 text-gray-400 text-2xl sm:text-3xl font-semibold text-center mt-20">
           Please select a menu item
         </div>
       );
     }
 
-    if (selected.type === "file") {
-      return (
-        <div className="space-y-6">
-          <h1 className="text-center text-4xl font-bold text-gray-800">
-            {selected.label}
-          </h1>
-          <UploadFiles api={selected.api} />
-        </div>
-      );
-    }
+    switch (selected.type) {
+      case "file":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-center text-3xl sm:text-4xl font-bold text-gray-800">
+              {selected.label}
+            </h1>
+            <UploadFiles api={selected.api} category={selected.category} />
+          </div>
+        );
 
-    if (selected.type === "table") {
-      return (
-        <div className="space-y-6">
-          <h1 className="text-center text-4xl font-bold text-gray-800">
-            {selected.label}
-          </h1>
-          <UploadTable api={selected.api} />
-        </div>
-      );
-    }
+      case "table":
+        return (
+          <div className="space-y-6">
+            <h1 className="text-center text-3xl sm:text-4xl font-bold text-gray-800">
+              {selected.label}
+            </h1>
+            <UploadTable api={selected.api} category={selected.category} />
+          </div>
+        );
 
-    return null;
+      default:
+        return (
+          <div className="p-6 text-gray-500 text-center mt-20">
+            No component available for this menu type.
+          </div>
+        );
+    }
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-gray-100">
+      {/* Sidebar */}
       <Sidebar menuConfig={menuConfig} onSelect={setSelected} />
-      <div className="flex-1 bg-gray-50 p-6">{renderContent()}</div>
+
+      {/* Main Content */}
+      <div className="flex-1 p-6 overflow-y-auto">{renderContent()}</div>
     </div>
   );
 };
