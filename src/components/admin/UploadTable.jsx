@@ -89,7 +89,7 @@ const UploadTable = ({ api }) => {
   const handleSubmit = async () => {
     try {
       // Submit table
-      await axios.post(`http://localhost:5000${api}`, {
+      await axios.post(`http://localhost:8000${api}`, {
         title: tableTitle,
         headers,
         data,
