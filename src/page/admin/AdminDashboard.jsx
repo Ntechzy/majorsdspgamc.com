@@ -21,9 +21,14 @@ const AdminDashboard = () => {
         return (
           <div className="space-y-6">
             <h1 className="text-center text-3xl sm:text-4xl font-bold text-gray-800">
-              {selected.label}
+              {selected.title || selected.label}
             </h1>
-            <UploadFiles api={selected.api} category={selected.category} />
+            <UploadFiles
+              title={selected.title}
+              page={selected.page}
+              category={selected.category}
+              api={selected.api}
+            />
           </div>
         );
 
@@ -31,9 +36,43 @@ const AdminDashboard = () => {
         return (
           <div className="space-y-6">
             <h1 className="text-center text-3xl sm:text-4xl font-bold text-gray-800">
-              {selected.label}
+              {selected.title || selected.label}
             </h1>
-            <UploadTable api={selected.api} category={selected.category} />
+            <UploadTable
+              title={selected.title}
+              page={selected.page}
+              category={selected.category}
+              api={selected.api}
+            />
+          </div>
+        );
+
+      case "multiple": // 👈 handle multiple sections
+        return (
+          <div className="space-y-10">
+            <h1 className="text-center text-3xl sm:text-4xl font-bold text-gray-800">
+              {selected.title || selected.label}
+            </h1>
+            {selected.sections.map((section, idx) => (
+              <div key={idx} className="space-y-4 p-6 border rounded-lg bg-white shadow">
+                <h2 className="text-2xl font-semibold text-gray-700">{section.title}</h2>
+                {section.type === "file" ? (
+                  <UploadFiles
+                    title={section.title}
+                    page={section.page}
+                    category={section.category}
+                    api={section.api}
+                  />
+                ) : (
+                  <UploadTable
+                    title={section.title}
+                    page={section.page}
+                    category={section.category}
+                    api={section.api}
+                  />
+                )}
+              </div>
+            ))}
           </div>
         );
 

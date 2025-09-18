@@ -12,9 +12,7 @@ const Sidebar = ({ menuConfig, onSelect }) => {
       {/* Sidebar Menu with hidden scrollbar */}
       <ul
         className="flex-1 overflow-y-auto px-4 py-6 space-y-3"
-        style={{
-          scrollbarWidth: "none", // Firefox
-        }}
+        style={{ scrollbarWidth: "none" }}
       >
         {Object.entries(menuConfig).map(([key, section]) => (
           <div key={key}>
@@ -44,9 +42,7 @@ const Sidebar = ({ menuConfig, onSelect }) => {
         ))}
       </ul>
 
-      
-
-      {/* Additional CSS to hide scrollbar in Webkit browsers */}
+      {/* Hide scrollbar in Webkit */}
       <style jsx>{`
         ul::-webkit-scrollbar {
           display: none;

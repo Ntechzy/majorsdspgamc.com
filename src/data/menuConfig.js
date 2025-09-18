@@ -1,5 +1,4 @@
 import {
-  User,
   Stethoscope,
   GraduationCap,
   Users,
@@ -22,11 +21,24 @@ export const menuConfig = {
       {
         label: "Teaching Staff",
         icon: GraduationCap,
-        type: "file",
-        api: "/teaching-staff",
-        category: "teaching-staff",
-        page: "ncism",
+        type: "multiple", // 👈 new type
         title: "Teaching Staff Records",
+        sections: [
+          {
+            title: "Teaching Staff - PDFs",
+            type: "file",
+            api: "/teaching-staff-pdf",
+            category: "teaching-staff-pdf",
+            page: "ncism",
+          },
+          {
+            title: "Teaching Staff - Images",
+            type: "file",
+            api: "/teaching-staff-images",
+            category: "teaching-staff-images",
+            page: "ncism",
+          },
+        ],
       },
       {
         label: "Intake Capacity",
