@@ -132,7 +132,10 @@ const App = () => {
         <Route path="/pages/Affiliation" element={<Affiliation />} />
         <Route path="/pages/ClinicalMaterialinHospital" element={<ClinicalMaterialinHospital />} />
         <Route path="/pages/HospitalOPD_IPD_Data" element={<HospitalOPD_IPD_Data />} />
+
       </Routes>
+
+      
 
       <Footer />
       <ApplyNow />
