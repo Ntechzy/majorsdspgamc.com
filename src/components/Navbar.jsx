@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { ChevronDown, Pencil, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Menu data
@@ -39,27 +39,51 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Principal and Medical Superintendent", path: "/page/principal-medical-superintendent" },
-      { name: "Teaching Staff", path: "/pages/TeachingStaff.php" },
-      { name: "Intake Capacity", path: "/pages/IntakeCapacity.php" },
-      { name: "Non Teaching Staff", path: "/pages/NonTeachingStaff.php" },
-      { name: "Student Details", path: "/pages/StudentList.php" },
-      { name: "Research Publication", path: "/pages/ResearchPublication.php" },
-      { name: "Conferences and Academic Activities", path: "/pages/ConferencesandAcademicActivities.php" },
+      {
+        name: "Principal and Medical Superintendent",
+        path: "/page/principal-medical-superintendent",
+      },
+      { name: "Teaching Staff", path: "/pages/TeachingStaff" },
+      { name: "Intake Capacity", path: "/pages/IntakeCapacity" },
+      { name: "Non Teaching Staff", path: "/pages/NonTeachingStaff" },
+      { name: "Student Details", path: "/pages/StudentDetails" },
+      { name: "Research Publication", path: "/pages/ResearchPublication" },
+      {
+        name: "Conferences and Academic Activities",
+        path: "/pages/ConferencesandAcademicActivities",
+      },
       {
         name: "Attendance Report",
         path: "javascript:void(0);",
         hasDropdown: true,
         submenu: [
-          { name: "BAMS Students Attendance", path: "/pages/BAMSStudentsAttendance.php" },
-          { name: "Hospital Non-Teaching Staff Attendance", path: "/pages/HospitalNonTeachingStaffAttendance.php" },
-          { name: "College Non-Teaching Staff Attendance", path: "/pages/CollegeNonTeachingStaffAttendance.php" },
-          { name: "Teaching Staff Attendance", path: "/pages/TeachingStaffAttendance.php" },
+          {
+            name: "BAMS Students Attendance",
+            path: "/pages/BAMSStudentsAttendance",
+          },
+          {
+            name: "Hospital Non-Teaching Staff Attendance",
+            path: "/pages/HospitalNonTeachingStaffAttendance",
+          },
+          {
+            name: "College Non-Teaching Staff Attendance",
+            path: "/pages/CollegeNonTeachingStaffAttendance",
+          },
+          {
+            name: "Teaching Staff Attendance",
+            path: "/pages/TeachingStaffAttendance",
+          },
         ],
       },
-      { name: "Affiliations", path: "/pages/ApprovalAffiliation.php" },
-      { name: "Clinical Material in Hospital", path: "/pages/ClinicalMaterialinHospital.php" },
-      { name: "Hospital Month wise OP/IP Statistics", path: "/pages/HospitalOPD_IPD_Data.php" },
+      { name: "Affiliations", path: "/pages/Affiliation" },
+      {
+        name: "Clinical Material in Hospital",
+        path: "/pages/ClinicalMaterialinHospital",
+      },
+      {
+        name: "Hospital Month wise OP/IP Statistics",
+        path: "/pages/HospitalOPD_IPD_Data",
+      },
     ],
   },
   {
@@ -68,7 +92,10 @@ const menuItems = [
     hasDropdown: true,
     submenu: [
       { name: "Hospital Facility", path: "/facility/hospital-facility" },
-      { name: "College & Other Facilities", path: "/facility/College-facility" },
+      {
+        name: "College & Other Facilities",
+        path: "/facility/College-facility",
+      },
       { name: "Hostel", path: "/facility/hostel" },
       { name: "Gym", path: "/facility/gym" },
     ],
@@ -87,7 +114,10 @@ const menuItems = [
     path: "javascript:void(0);",
     hasDropdown: true,
     submenu: [
-      { name: "Hospital OPD/IPD Data", path: "/hospital-data/hospital-opd-ipd-data" },
+      {
+        name: "Hospital OPD/IPD Data",
+        path: "/hospital-data/hospital-opd-ipd-data",
+      },
       { name: "Other Hospital Data", path: "/hospital-data/otherhospitaldata" },
     ],
   },
@@ -110,6 +140,7 @@ const menuItems = [
 
 const Navbar = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null); // 👈 for nested submenu desktop
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(null);
   const closeTimeoutRef = useRef(null);
@@ -120,7 +151,11 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <img src="/logo.png" alt="Logo" className="h-14 w-auto" />
-          <img src="/logo-heading.png" alt="Heading" className="h-12 w-auto ml-2" />
+          <img
+            src="/logo-heading.png"
+            alt="Heading"
+            className="h-12 w-auto ml-2"
+          />
         </div>
 
         {/* Desktop Menu */}
@@ -136,13 +171,15 @@ const Navbar = () => {
               onMouseLeave={() => {
                 closeTimeoutRef.current = setTimeout(() => {
                   setOpenIndex(null);
+                  setOpenSubmenuIndex(null);
                 }, 300);
               }}
             >
               <a
                 href={item.path}
-                className={`text-md font-semibold ${item.name === "Home" ? "text-[#00715D]" : "text-black"
-                  } hover:text-[#00715D] flex items-center gap-1`}
+                className={`text-md font-semibold ${
+                  item.name === "Home" ? "text-[#00715D]" : "text-black"
+                } hover:text-[#00715D] flex items-center gap-1`}
               >
                 {item.name}
                 {item.hasDropdown && <ChevronDown size={16} />}
@@ -152,10 +189,38 @@ const Navbar = () => {
               {item.hasDropdown && openIndex === index && (
                 <ul className="absolute top-10 left-0 min-w-48 bg-white border border-gray-200 shadow-lg rounded-md py-2 z-50">
                   {item.submenu.map((sub, subIndex) => (
-                    <li key={subIndex} className="px-4 py-2 hover:bg-gray-100">
-                      <a href={sub.path} className="text-sm text-gray-800">
+                    <li
+                      key={subIndex}
+                      className="relative group px-4 py-2 hover:bg-gray-100"
+                      onMouseEnter={() => setOpenSubmenuIndex(subIndex)}
+                      onMouseLeave={() => setOpenSubmenuIndex(null)}
+                    >
+                      <a
+                        href={sub.path}
+                        className="text-sm text-gray-800 flex items-center justify-between"
+                      >
                         {sub.name}
+                        {sub.hasDropdown && <ChevronDown size={14} />}
                       </a>
+
+                      {/* Nested submenu (Desktop) */}
+                      {sub.hasDropdown && openSubmenuIndex === subIndex && (
+                        <ul className="absolute top-0 left-full min-w-56 bg-white border border-gray-200 shadow-lg rounded-md py-2 z-50">
+                          {sub.submenu.map((nested, nestedIndex) => (
+                            <li
+                              key={nestedIndex}
+                              className="px-4 py-2 hover:bg-gray-100"
+                            >
+                              <a
+                                href={nested.path}
+                                className="text-sm text-gray-800"
+                              >
+                                {nested.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -181,26 +246,68 @@ const Navbar = () => {
                 <div
                   className="flex justify-between items-center text-black font-semibold"
                   onClick={() =>
-                    setMobileSubmenuOpen(mobileSubmenuOpen === index ? null : index)
+                    setMobileSubmenuOpen(
+                      mobileSubmenuOpen === index ? null : index
+                    )
                   }
                 >
                   <a href={item.path}>{item.name}</a>
                   {item.hasDropdown && (
                     <ChevronDown
-                      className={`transform transition-transform ${mobileSubmenuOpen === index ? "rotate-180" : "rotate-0"
-                        }`}
+                      className={`transform transition-transform ${
+                        mobileSubmenuOpen === index ? "rotate-180" : "rotate-0"
+                      }`}
                       size={18}
                     />
                   )}
                 </div>
+
                 {/* Submenu (Mobile) */}
                 {item.hasDropdown && mobileSubmenuOpen === index && (
                   <ul className="ml-4 mt-2 space-y-2">
                     {item.submenu.map((sub, subIndex) => (
                       <li key={subIndex}>
-                        <a href={sub.path} className="text-sm text-gray-700">
-                          {sub.name}
-                        </a>
+                        <div
+                          className="flex justify-between items-center text-gray-700"
+                          onClick={() =>
+                            setMobileSubmenuOpen(
+                              mobileSubmenuOpen === `${index}-${subIndex}`
+                                ? index
+                                : `${index}-${subIndex}`
+                            )
+                          }
+                        >
+                          <a href={sub.path} className="text-sm">
+                            {sub.name}
+                          </a>
+                          {sub.hasDropdown && (
+                            <ChevronDown
+                              className={`transform transition-transform ${
+                                mobileSubmenuOpen === `${index}-${subIndex}`
+                                  ? "rotate-180"
+                                  : "rotate-0"
+                              }`}
+                              size={14}
+                            />
+                          )}
+                        </div>
+
+                        {/* Nested submenu (Mobile) */}
+                        {sub.hasDropdown &&
+                          mobileSubmenuOpen === `${index}-${subIndex}` && (
+                            <ul className="ml-4 mt-2 space-y-2">
+                              {sub.submenu.map((nested, nestedIndex) => (
+                                <li key={nestedIndex}>
+                                  <a
+                                    href={nested.path}
+                                    className="text-sm text-gray-600"
+                                  >
+                                    {nested.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                       </li>
                     ))}
                   </ul>
@@ -215,4 +322,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
